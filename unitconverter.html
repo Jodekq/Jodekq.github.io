@@ -1,0 +1,270 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/ProjektYIcon1.ico">
+    <title>Project Y - Unit Converter</title>
+
+    <!-- icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- script -->
+    <script src="js/index.js" defer></script>
+    <script src="js/converter/unitconverter.js"></script>
+    
+    <!-- style -->
+    <script src="assets/less.js" defer></script>
+    <link rel="stylesheet/less" type="text/css" href="css/index.less"/>
+    <link rel="stylesheet/less" type="text/css" href="css/fonts.less"/>
+
+    <!-- specific style -->
+    <link rel="stylesheet/less" type="text/css" href="css/unitconverter/unitconverter.less"/>
+
+</head>
+<body data-theme="dark">
+    <!-- header ----------------------------------------------- header -->
+    <header class="main-header">
+        <!-- toggle target blank -->
+        <button class="toggle-target-blank" onclick="toggleTargetBlank()"><i class='bx bx-window'></i></button>
+        <h1 class="title"><a class="change-target" href="index.html">Project Y</a> - Unit Converter</h1>
+        <!-- toggle themes buttons -->
+        <button id="dark-theme-button" class="theme-button"><i class='bx bx-moon' ></i></button>
+        <button id="light-theme-button" class="theme-button"><i class='bx bx-sun'></i></button>
+        <button id="green-theme-button" class="theme-button"><i class='bx bxs-tree-alt' ></i></button>
+        <a class="discord-button" href="discordserver" target="_blank">
+          <i class='bx bxl-discord-alt'></i>
+        </a>
+    </header>
+    <section class="page">
+      <!--  sidebar -------------------------------------sidebar -->
+      <aside class="sidebar">
+        <!-- calculator -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="calculator.html">
+            <i class="bx bx-calculator"></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Calculator</span>
+            <a href="#" onclick="openWindowMiniWindow('minicalculator.html')">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- file converter -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="fileconverter.html">
+            <i class="bx bxs-file-export"></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>File Converter</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- unit converter -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="unitconverter.html">
+            <i class='bx bx-transfer-alt'></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Unit Converter</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Time Zone Converter -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="timezoneconverter.html">
+            <i class='bx bx-world' ></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>TimeZone Converter</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- image compressor -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="imagecompressor.html">
+            <i class='bx bx-collapse-alt'></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Image Compressor</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- timer -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="#">
+            <i class='bx bxs-timer' ></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Timer</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- colorpicker -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="#">
+            <i class="bx bx-color"></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Color Picker</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- password generator -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="#">
+            <i class='bx bxs-lock'></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Password Generator</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- random generator -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="#">
+            <i class='bx bx-shuffle'></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Random Generator</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- qr code generator -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="#">
+            <i class='bx bx-qr' ></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>QR Code Generator</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+      <!-- Unit Converter Section -->
+      <section class="unit-converter-section">
+        <!-- Length Converter -->
+        <div id="length-converter" class="converter">
+            <h1>Length-Converter</h1>
+            <input type="number" class="inputvalue" id="inputValue-length" placeholder="Enter Value">
+            <div class="unit-dropdown-wrapper">
+              <p>From</p>
+              <select class="unit-dropdown" id="fromUnit-length">
+                <option value="m">Meter (m)</option>
+                <option value="cm">Centimeter (cm)</option>
+                <option value="in">Inch (in)</option>
+                <option value="ft">Foot (ft)</option>
+              </select>
+            </div>
+            <div class="unit-dropdown-wrapper">
+              <p>To</p>
+              <select class="unit-dropdown" id="toUnit-length">
+                <option value="m">Meter (m)</option>
+                <option value="cm">Centimeter (cm)</option>
+                <option value="in">Inch (in)</option>
+                <option value="ft">Foot (ft)</option>
+              </select>
+            </div>
+            <div class="convert-button" onclick="convertlength()">Convert</div>
+            <div class="result">
+              <p>Result: <span id="length-result"></span></p>
+            </div>
+        </div>
+        <!-- Temperture Converter -->
+        <div id="temperature-converter" class="converter">
+            <h1>Temperature-Converter</h1>
+            <input type="number" class="inputvalue" id="temperature-inputValue" placeholder="Enter Value">
+            <div class="unit-dropdown-wrapper">
+              <p>From</p>
+              <select class="unit-dropdown" id="temperature-fromUnit">
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+              </select>
+            </div>
+            <div class="unit-dropdown-wrapper">
+              <p>To</p>
+              <select class="unit-dropdown" id="temperature-toUnit">
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+              </select>
+            </div>
+            <div class="convert-button" onclick="converttemperature()">Convert</div>
+            <div class="result">
+              <p>Result: <span id="temperature-result"></span></p>
+            </div>
+        </div>
+        <div id="weight-converter" class="converter">
+          <h1>Weight-Converter</h1>
+          <input type="number" class="inputvalue" id="weight-inputValue" placeholder="Enter Value">
+            <div class="unit-dropdown-wrapper">
+              <p>From</p>
+              <select class="unit-dropdown" id="weight-fromUnit">
+                <option value="kilogram">Kilogram (kg)</option>
+                <option value="gram">Gram (g)</option>
+                <option value="milligram">Milligram (mg)</option>
+                <option value="ton">Ton (t)</option>
+                <option value="pound">Pound (lb)</option>
+                <option value="ounce">Ounce (oz)</option>
+                <option value="stone">Stone (st)</option>
+              </select>
+            </div>
+            <div class="unit-dropdown-wrapper">
+              <p>To</p>
+              <select class="unit-dropdown" id="weight-toUnit">
+                <option value="kilogram">Kilogram (kg)</option>
+                <option value="gram">Gram (g)</option>
+                <option value="milligram">Milligram (mg)</option>
+                <option value="ton">Ton (t)</option>
+                <option value="pound">Pound (lb)</option>
+                <option value="ounce">Ounce (oz)</option>
+                <option value="stone">Stone (st)</option>
+              </select>
+            </div>
+            <div class="convert-button" onclick="convertweight()">Convert</div>
+            <div class="result">
+              <p>Result: <span id="weight-result"></span></p>
+            </div>
+        </div>
+        <div id="time-converter" class="converter">
+          <h1>Time-Converter</h1>
+        </div>
+        <div id="currency-converter" class="converter">
+          <h1>Currency-Converter</h1>
+        </div>
+      </section>
+      <div class="unit-converter-sidebar-right">
+          <a href="#length-converter">Length <i class='bx bx-ruler'></i></a>
+          <a href="#temperature-converter">Temperature <i class='bx bxs-thermometer'></i></a>
+          <a href="#weight-converter">Weight <i class='bx bx-dumbbell'></i></a>
+          <a href="#time-converter">Time <i class='bx bxs-time'></i></a>
+          <a href="#currency-converter">Currency <i class='bx bxs-dollar-circle'></i></a>
+      </div>
+    </section>
+    <footer class="main-footer">
+
+    </footer>
+</body>
+</html>

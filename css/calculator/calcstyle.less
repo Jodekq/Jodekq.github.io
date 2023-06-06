@@ -1,0 +1,176 @@
+body {
+    background-color: var(--background-color-bg);
+    user-select: none;
+}
+
+.complete-calculator {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 2;
+    gap: 5px;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calcsection {
+        font-family: "Montserrat"; 
+        display: flex;
+        
+        .bx {
+            color: var(--button-text-color);
+        } 
+
+        .calculator {
+            font-weight: 500;  
+        
+            .row {
+                display: flex;
+
+                .btn,
+                .btn-big-vertical,
+                .btn-big-horizontally {
+                    margin: 5px;
+                    border: 2px solid var(--header-sidebar-color-bg);
+                    border-radius: 5px;
+                    font-size: 20px;
+                    color: var(--button-text-color);
+                    background-color: var(--color-button);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+
+                .btn {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .btn-big-vertical {
+                    width: 50px;
+                    height: 110px;
+                }
+
+                .btn-big-horizontally {
+                    width: 110px;
+                    height: 50px;
+                }
+            }
+        }
+
+        .extra-calc {
+            width: 60px;
+            height: 100px;
+
+            .extra-row {
+                display: flex;
+                flex-direction: column;
+                width: fit-content;
+
+                .btn,
+                .btn-big-vertical,
+                .btn-big-horizontally {
+                    margin: 5px;
+                    border: 2px solid var(--header-sidebar-color-bg);
+                    border-radius: 5px;
+                    font-size: 20px;
+                    color: var(--button-text-color);
+                    background-color: var(--color-button);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+
+                .btn {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .btn-big-vertical {
+                    width: 50px;
+                    height: 110px;
+                }
+
+                .btn-big-horizontally {
+                    width: 110px;
+                    height: 50px;
+                }
+            }
+        }
+        
+    }   
+
+    .wrapper-screen-result {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .screen {
+            margin-top: 5px;
+            border: 2px solid var(--header-sidebar-color-bg);
+            border-radius: 5px;
+            height: 50px;
+            width: 220px;
+            font-size: 20px;
+            font-family: "Montserrat";
+            color: var(--button-text-color);
+            background-color: var(--color-button);
+            display: flex;
+            justify-content: right;
+            padding-right: 10px;
+            align-items: center;
+
+            @media screen and (max-width: 600px) {
+                width: 235px;
+            }
+        }
+
+    
+        .result-container {
+            z-index: 2;
+            border: 2px solid var(--header-sidebar-color-bg);
+            border-radius: 5px;
+            height: fit-content;
+            min-height: 235px;
+            width: 220px;
+            padding: 10px;
+            font-size: 20px;
+            font-family: "Montserrat";
+            color: var(--button-text-color);
+            background-color: var(--color-button);
+            display: flex;
+            flex-direction: column-reverse;
+            text-align: right;
+            justify-content: flex-end;
+
+            @media screen and (max-width: 600px) {
+                width: 235px;
+            }
+        }
+
+
+    }    
+
+    .clear-button {
+        margin-top: 65px;
+        padding: 5px;
+        border: 2px solid var(--header-sidebar-color-bg);
+        border-radius: 5px;
+        width: fit-content;
+        height: fit-content;
+        color: var(--button-text-color);
+        background-color: var(--color-button);
+        display: flex;
+        cursor: pointer;
+
+        @media screen and (max-width: 600px) {
+            margin-top: 0;
+        }
+    }
+
+}

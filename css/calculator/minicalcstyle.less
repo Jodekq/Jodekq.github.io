@@ -1,0 +1,177 @@
+body {
+    background-color: var(--background-color-bg);
+    user-select: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-color-bg);
+  }
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: var(--header-sidebar-color-bg);
+}
+
+
+.calcsection {
+    position: absolute;
+    margin-top: 20px;
+    width: 100%;
+    font-family: "Montserrat"; 
+    display: flex;
+    
+    .bx {
+        color: var(--button-text-color);
+    } 
+
+    .calculator {
+        font-weight: 500;  
+    
+        .row {
+            display: flex;
+
+            .btn,
+            .btn-big-vertical,
+            .btn-big-horizontally {
+                margin: 5px;
+                border: 2px solid var(--header-sidebar-color-bg);
+                border-radius: 5px;
+                font-size: 20px;
+                color: var(--button-text-color);
+                background-color: var(--color-button);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .btn {
+                width: 50px;
+                height: 50px;
+            }
+
+            .btn-big-vertical {
+                width: 50px;
+                height: 110px;
+            }
+
+            .btn-big-horizontally {
+                width: 110px;
+                height: 50px;
+            }
+        }
+    }
+
+    .extra-calc {
+        width: 60px;
+        height: 100px;
+
+        .extra-row {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+
+            .btn,
+            .btn-big-vertical,
+            .btn-big-horizontally {
+                margin: 5px;
+                border: 2px solid var(--header-sidebar-color-bg);
+                border-radius: 5px;
+                font-size: 20px;
+                color: var(--button-text-color);
+                background-color: var(--color-button);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .btn {
+                width: 50px;
+                height: 50px;
+            }
+
+            .btn-big-vertical {
+                width: 50px;
+                height: 113px;
+            }
+
+            .btn-big-horizontally {
+                width: 113px;
+                height: 50px;
+            }
+        }
+    }
+    
+}   
+
+.screen-wrapper {
+    display: flex;
+    justify-content: right;
+
+    .screen {
+        margin-top: 25px;
+        margin-right: 60px;
+        border: 2px solid var(--header-sidebar-color-bg);
+        border-radius: 5px;
+        height: 40px;
+        width: 220px;
+        font-size: 20px;
+        font-family: "Montserrat";
+        color: var(--button-text-color);
+        background-color: var(--color-button);
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .bx {
+        color: var(--button-text-color);
+    } 
+}  
+
+.result-container-wrapper {
+    display: flex;
+    justify-content: right;
+
+    .result-container {
+        z-index: 2;
+        margin-top: 15px;
+        margin-right: 60px;
+        padding-top: 10px;
+        border: 2px solid var(--header-sidebar-color-bg);
+        border-radius: 5px;
+        height: fit-content;
+        min-height: 235px;
+        width: 220px;
+        font-size: 20px;
+        font-family: "Montserrat";
+        color: var(--button-text-color);
+        background-color: var(--color-button);
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: right;
+        justify-content: flex-end;
+    }
+
+    .clear-button {
+        position: absolute;
+        left: 85%;
+        margin-top: 15px;
+        padding: 5px;
+        padding-left: 20px;
+        border: 2px solid var(--header-sidebar-color-bg);
+        border-radius: 5px;
+        width: fit-content;
+        height: fit-content;
+        color: var(--button-text-color);
+        background-color: var(--color-button);
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/ProjektYIcon1.ico">
+    <title>Project Y - File Converter</title>
+
+    <!-- icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- script -->
+    <script src="js/index.js" defer></script>
+    <script src="js/converter/converter.js" defer></script>
+    
+    <!-- style -->
+    <script src="assets/less.js" defer></script>
+    <link rel="stylesheet/less" type="text/css" href="css/index.less"/>
+    <link rel="stylesheet/less" type="text/css" href="css/fonts.less"/>
+
+    <!-- specific style -->      
+    <link rel="stylesheet/less" type="text/css" href="css/fileconverter/fileconverterrstyle.less"/>
+
+</head>
+<body data-theme="dark">
+      <!-- header ----------------------------------------------- header -->
+      <header class="main-header">
+        <!-- toggle target blank -->
+        <button class="toggle-target-blank" onclick="toggleTargetBlank()"><i class='bx bx-window'></i></button>
+        <h1 class="title"><a class="change-target" href="index.html">Project Y</a> - File Converter</h1>
+        <a class="discord-button" href="discordserver" target="_blank">
+            <i class='bx bxl-discord-alt'></i>
+        </a>
+        <!-- toggle themes buttons -->
+        <button id="dark-theme-button" class="dark-theme-button"><i class='bx bx-moon' ></i></button>
+        <button id="light-theme-button" class="light-theme-button"><i class='bx bx-sun'></i></button>
+        <button id="green-theme-button" class="green-theme-button"><i class='bx bxs-tree-alt' ></i></button>
+    </header>
+    <section class="page">
+      <!--  sidebar -------------------------------------sidebar -->
+      <aside class="sidebar">
+        <!-- calculator -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="calculator.html">
+            <i class="bx bx-calculator"></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Calculator</span>
+            <a href="#" onclick="openWindowMiniWindow('minicalculator.html')">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- file converter -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="fileconverter.html">
+            <i class="bx bxs-file-export"></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>File Converter</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- unit converter -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="unitconverter.html">
+            <i class='bx bx-transfer-alt'></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Unit Converter</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Time Zone Converter -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="timezoneconverter.html">
+            <i class='bx bx-world' ></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>TimeZone Converter</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- image compressor -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="imagecompressor.html">
+            <i class='bx bx-collapse-alt'></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Image Compressor</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- timer -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="#">
+            <i class='bx bxs-timer' ></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Timer</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- colorpicker -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="#">
+            <i class="bx bx-color"></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Color Picker</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- password generator -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="#">
+            <i class='bx bxs-lock'></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Password Generator</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- random generator -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="#">
+            <i class='bx bx-shuffle'></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>Random Generator</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+        <!-- qr code generator -->
+        <div class="sidebar-item">
+          <a class="sidebar-icons sidebar-item change-target" href="#">
+            <i class='bx bx-qr' ></i>
+          </a>
+          <div class="extend-sidebar">
+            <span>QR Code Generator</span>
+            <a href="#">
+              <i class="bx bx-arrow-from-bottom"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+      <section class="converter">
+          <div class="convert-header">
+              <h1 class="convert-title">Image File Convert to: </h1>
+              <div class="dropdown-format-select">
+                <button class="dropdown-toggle" type="button" id="output-format-dropdown">
+                  Output Format
+                </button>
+                <div class="dropdown-menu-wrapper">
+                  <ul class="dropdown-menu" aria-labelledby="output-format-dropdown">
+                  <li><a class="dropdown-item" href="#" data-format="jpg">JPEG</a></li>
+                  <li><a class="dropdown-item" href="#" data-format="png">PNG</a></li>
+                  <li><a class="dropdown-item" href="#" data-format="gif">GIF</a></li>
+                  <li><a class="dropdown-item" href="#" data-format="svg">SVG</a></li>
+                  <li><a class="dropdown-item" href="#" data-format="ico">ICO</a></li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+          <div class="input-file-button">
+            <input class="input-file" type="file" id="file-input">
+          </div>
+          <div class="convert-button-wrapper">
+              <div class="convert-button" onclick="">Convert</div>
+          </div>
+          <p class="convert-message" id="message"></p>
+          <a class="download-link-convert" id="download-link" download style="display: none;">Get</a>
+        </section>
+    </section>
+    <footer class="main-footer">
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,195 @@
+@import './colors.less';
+@import './fonts.less';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.bx {
+    display: block;
+    font-size: 30px;
+    color: white;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+background: var(--background-color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+background: var(--header-sidebar-color-bg);
+border-radius: 5px;
+}
+
+
+a:visited {
+    text-decoration: none;
+    color: var(--general-text-cl);
+}
+
+.header-mainpage-link{
+    cursor: pointer;
+}
+
+body {
+    padding: 5px;
+    background-color: var(--background-color-bg);
+    user-select: none;
+    font-family: "Montserrat";
+
+    //header ------------------------------------------ header
+
+    .main-header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 65px;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+        left: -8px;
+        background-color: var(--header-sidebar-color-bg);
+        gap: 20px;
+    } 
+
+        .title {
+            justify-content: center;
+            flex-grow: 70;
+            text-align: left;
+            color: var(--general-text-cl);
+
+            @media screen and (max-width: 635px) {
+                font-size: 15px;
+            }
+        }
+
+        .discord-button {
+            flex-grow: 7;
+            padding-right: 15px;
+            font-size: 30px;
+
+            .bx .bxl-discord-alt {
+                width: 36px;
+                height: 36px;
+            }
+
+            @media screen and (max-width: 635px) {
+                font-size: 22px;
+            }
+        }
+
+        .toggle-target-blank {
+            justify-content: left;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            flex-grow: 1;
+            padding-left: 5px;
+            font-size: 30px;
+
+            @media screen and (max-width: 635px) {
+                font-size: 22px;
+            }
+        }
+
+
+        .theme-button {
+            background: transparent;
+            float: right;
+            border: none;
+            cursor: pointer;
+            flex-grow: 1;
+            font-size: 30px;
+
+            @media screen and (max-width: 635px) {
+                font-size: 22px;
+            }
+        }
+
+
+    .page {
+        display: flex;
+
+        //sidebar ------------------------------------------- sidebar
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 15px;
+            gap: 15px;
+            width: 10%;
+        
+            .sidebar-icons {
+            background-color: var(--header-sidebar-color-bg);
+            border-radius: 5px;
+            padding: 5px;
+            padding-left: 10px;
+            position: relative;
+            left: -10px;
+            z-index: 5;
+            font-size: 30px;
+        
+            &.sidebar-item {
+                &:hover ~ .extend-sidebar {
+                display: flex;
+                left: -16px;
+                transition: left 0.5s ease-in-out;
+                }
+            }
+            }
+            
+            .sidebar-item {
+            display: flex;
+            flex-direction: row;
+        
+                .extend-sidebar {
+                    display: flex;
+                    flex-direction: row;
+                    color: var(--general-text-cl);
+                    align-items: center;
+                    gap: 5px;
+                    padding-left: 10px;
+                    background-color: var(--header-sidebar-color-bg);
+                    border-radius: 5px;
+                    position: relative;
+                    left: -250px;
+                    transition: left 0.3s ease-in-out;
+                    font-size: 15px;
+
+                    &:hover {
+                        display: flex;
+                        left: -16px;
+                        transition: left 0.3s ease-in-out;
+                    }
+
+                    &:hover a {
+                        cursor: pointer;
+                    }
+
+                    i {
+                        font-size: 25px;
+                    }
+                }
+            }    
+        }
+    }
+
+
+    //footer ------------------------------------------- footer
+
+    .main-footer {
+        display: flex; 
+        justify-content: center;
+        width: 100%;
+    }
+}
