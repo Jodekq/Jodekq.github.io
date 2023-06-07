@@ -16,7 +16,8 @@
     <script src="js/converter/unitconverter.js"></script>
     
     <!-- style -->
-    <script src="assets/less.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/less" defer></script>
+    <script src="./templates/template.js" type="module" defer></script> 
     <link rel="stylesheet/less" type="text/css" href="css/index.less"/>
     <link rel="stylesheet/less" type="text/css" href="css/fonts.less"/>
 
@@ -27,146 +28,24 @@
 <body data-theme="dark">
     <!-- header ----------------------------------------------- header -->
     <header class="main-header">
-        <!-- toggle target blank -->
-        <button class="toggle-target-blank" onclick="toggleTargetBlank()"><i class='bx bx-window'></i></button>
         <h1 class="title"><a class="change-target" href="index.html">Project Y</a> - Unit Converter</h1>
         <!-- toggle themes buttons -->
         <button id="dark-theme-button" class="theme-button"><i class='bx bx-moon' ></i></button>
         <button id="light-theme-button" class="theme-button"><i class='bx bx-sun'></i></button>
         <button id="green-theme-button" class="theme-button"><i class='bx bxs-tree-alt' ></i></button>
+        <!-- discord button -->
         <a class="discord-button" href="discordserver" target="_blank">
           <i class='bx bxl-discord-alt'></i>
         </a>
     </header>
     <section class="page">
       <!--  sidebar -------------------------------------sidebar -->
-      <aside class="sidebar">
-        <!-- calculator -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="calculator.html">
-            <i class="bx bx-calculator"></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Calculator</span>
-            <a href="#" onclick="openWindowMiniWindow('minicalculator.html')">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- file converter -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="fileconverter.html">
-            <i class="bx bxs-file-export"></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>File Converter</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- unit converter -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="unitconverter.html">
-            <i class='bx bx-transfer-alt'></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Unit Converter</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- Time Zone Converter -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="timezoneconverter.html">
-            <i class='bx bx-world' ></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>TimeZone Converter</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- image compressor -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="imagecompressor.html">
-            <i class='bx bx-collapse-alt'></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Image Compressor</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- timer -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="#">
-            <i class='bx bxs-timer' ></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Timer</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- colorpicker -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="#">
-            <i class="bx bx-color"></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Color Picker</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- password generator -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="#">
-            <i class='bx bxs-lock'></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Password Generator</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- random generator -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="#">
-            <i class='bx bx-shuffle'></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Random Generator</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- qr code generator -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="#">
-            <i class='bx bx-qr' ></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>QR Code Generator</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-      </aside>
+      <template src="./templates/sidebar.html"></template>
       <!-- Unit Converter Section -->
       <section class="unit-converter-section">
         <!-- Length Converter -->
         <div id="length-converter" class="converter">
-            <h1>Length-Converter</h1>
+            <h1>Length Converter</h1>
             <input type="number" class="inputvalue" id="inputValue-length" placeholder="Enter Value">
             <div class="unit-dropdown-wrapper">
               <p>From</p>
@@ -191,9 +70,10 @@
               <p>Result: <span id="length-result"></span></p>
             </div>
         </div>
+        <div class="horizontal-line"></div>
         <!-- Temperture Converter -->
         <div id="temperature-converter" class="converter">
-            <h1>Temperature-Converter</h1>
+            <h1>Temperature Converter</h1>
             <input type="number" class="inputvalue" id="temperature-inputValue" placeholder="Enter Value">
             <div class="unit-dropdown-wrapper">
               <p>From</p>
@@ -216,8 +96,9 @@
               <p>Result: <span id="temperature-result"></span></p>
             </div>
         </div>
+        <div class="horizontal-line"></div>
         <div id="weight-converter" class="converter">
-          <h1>Weight-Converter</h1>
+          <h1>Weight Converter</h1>
           <input type="number" class="inputvalue" id="weight-inputValue" placeholder="Enter Value">
             <div class="unit-dropdown-wrapper">
               <p>From</p>
@@ -248,11 +129,74 @@
               <p>Result: <span id="weight-result"></span></p>
             </div>
         </div>
+        <div class="horizontal-line"></div>
         <div id="time-converter" class="converter">
-          <h1>Time-Converter</h1>
+          <h1>Time Converter</h1>
+          <input type="number" class="inputvalue" id="time-inputValue" placeholder="Enter Value">
+          <div class="unit-dropdown-wrapper">
+            <p>From</p>
+            <select class="unit-dropdown" id="time-fromUnit">
+              <option value="millisecond">Millicensonds (ms)</option>
+              <option value="second">Seconds (s)</option>
+              <option value="minute">Minutes (min)</option>
+              <option value="hour">Hour (h)</option>
+              <option value="day">Day</option>
+              <option value="week">Week</option>
+              <option value="month">Month</option>
+              <option value="year">Year</option>
+            </select>
+          </div>
+          <div class="unit-dropdown-wrapper">
+            <p>To</p>
+            <select class="unit-dropdown" id="time-toUnit">
+              <option value="millisecond">Millicensonds (ms)</option>
+              <option value="second">Seconds (s)</option>
+              <option value="minute">Minutes (min)</option>
+              <option value="hour">Hour (h)</option>
+              <option value="day">Day</option>
+              <option value="week">Week</option>
+              <option value="month">Month</option>
+              <option value="year">Year</option>
+            </select>
+          </div>
+          <div class="convert-button" onclick="convertTimeAndDisplay()">Convert</div>
+          <div class="result">
+            <p>Result: <span id="time-result"></span></p>
+          </div>
         </div>
+        <div class="horizontal-line"></div>
         <div id="currency-converter" class="converter">
-          <h1>Currency-Converter</h1>
+          <h1>Currency Converter</h1>
+          <input type="number" class="inputvalue" id="time-inputValue" placeholder="Enter Value">
+          <div class="unit-dropdown-wrapper">
+            <p>From</p>
+            <select class="unit-dropdown" id="fromCurrency">
+              <option value="EUR">Euro (EUR)</option>
+              <option value="USD">US Dollar (USD)</option>
+              <option value="JPY">Japanese Yen (JPY)</option>
+              <option value="GBP">Pound Sterling (GBP)</option>
+              <option value="CHF">Swiss Franc (CHF)</option>
+              <option value="CNY">Chinese Renminbi (CNY)</option>
+              <option value="AUD">Australian Dollar (AUD)</option>
+            </select>
+          </div>
+          <div class="unit-dropdown-wrapper">
+            <p>To</p>
+            <select class="unit-dropdown" id="toCurrency">
+              <option value="EUR">Euro (EUR)</option>
+              <option value="USD">US Dollar (USD)</option>
+              <option value="JPY">Japanese Yen (JPY)</option>
+              <option value="GBP">Pound Sterling (GBP)</option>
+              <option value="CHF">Swiss Franc (CHF)</option>
+              <option value="CNY">Chinese Renminbi (CNY)</option>
+              <option value="AUD">Australian Dollar (AUD)</option>
+            </select>
+          </div>
+          <div class="convert-button" onclick="convertCurrency()">Convert</div>
+          <div class="result">
+            <p>Result: <span id="resultCurrency"></span></p>
+          </div>
+        </div>
         </div>
       </section>
       <div class="unit-converter-sidebar-right">

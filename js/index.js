@@ -29,39 +29,6 @@ function applyTheme(theme) {
   localStorage.setItem('data-theme', theme);
 }
 
-// button toggle target="_blank"
-
-const storedtoggleTarget = localStorage.getItem('target-blank-active');
-
-function toggleTargetBlank() {
-  var links = document.getElementsByClassName("change-target");
-  var button = document.querySelector("button");
-  var isTargetBlankActive = links[0].hasAttribute("target");
-
-  if (isTargetBlankActive) {
-    for (var i = 0; i < links.length; i++) {
-      links[i].removeAttribute("target");
-    }
-    button.innerHTML = '<i class="bx bx-window"></i>';
-  } else {
-    for (var i = 0; i < links.length; i++) {
-      links[i].setAttribute("target", "_blank");
-    }
-    button.innerHTML = '<i class="bx bx-windows"></i>';
-  }
-  
-  // Save the target attribute state in local storage
-  var targetBlankActive = isTargetBlankActive ? "off" : "on";
-  localStorage.setItem('target-blank-active', targetBlankActive);
-}
-
-// Load the target attribute state from local storage on page load
-window.addEventListener('DOMContentLoaded', function() {
-  if (storedtoggleTarget === "on") {
-    toggleTargetBlank();
-  }
-});
-
 // open mini calc function 
 
 function openWindowMiniWindow(url) {

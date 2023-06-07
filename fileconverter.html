@@ -15,7 +15,8 @@
     <script src="js/converter/converter.js" defer></script>
     
     <!-- style -->
-    <script src="assets/less.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/less" defer></script>
+    <script src="./templates/template.js" type="module" defer></script> 
     <link rel="stylesheet/less" type="text/css" href="css/index.less"/>
     <link rel="stylesheet/less" type="text/css" href="css/fonts.less"/>
 
@@ -26,141 +27,19 @@
 <body data-theme="dark">
       <!-- header ----------------------------------------------- header -->
       <header class="main-header">
-        <!-- toggle target blank -->
-        <button class="toggle-target-blank" onclick="toggleTargetBlank()"><i class='bx bx-window'></i></button>
         <h1 class="title"><a class="change-target" href="index.html">Project Y</a> - File Converter</h1>
-        <a class="discord-button" href="discordserver" target="_blank">
-            <i class='bx bxl-discord-alt'></i>
-        </a>
         <!-- toggle themes buttons -->
-        <button id="dark-theme-button" class="dark-theme-button"><i class='bx bx-moon' ></i></button>
-        <button id="light-theme-button" class="light-theme-button"><i class='bx bx-sun'></i></button>
-        <button id="green-theme-button" class="green-theme-button"><i class='bx bxs-tree-alt' ></i></button>
+        <button id="dark-theme-button" class="theme-button"><i class='bx bx-moon' ></i></button>
+        <button id="light-theme-button" class="theme-button"><i class='bx bx-sun'></i></button>
+        <button id="green-theme-button" class="theme-button"><i class='bx bxs-tree-alt' ></i></button>
+        <!-- discord button -->
+        <a class="discord-button" href="discordserver" target="_blank">
+          <i class='bx bxl-discord-alt'></i>
+        </a>
     </header>
     <section class="page">
       <!--  sidebar -------------------------------------sidebar -->
-      <aside class="sidebar">
-        <!-- calculator -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="calculator.html">
-            <i class="bx bx-calculator"></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Calculator</span>
-            <a href="#" onclick="openWindowMiniWindow('minicalculator.html')">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- file converter -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="fileconverter.html">
-            <i class="bx bxs-file-export"></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>File Converter</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- unit converter -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="unitconverter.html">
-            <i class='bx bx-transfer-alt'></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Unit Converter</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- Time Zone Converter -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="timezoneconverter.html">
-            <i class='bx bx-world' ></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>TimeZone Converter</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- image compressor -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="imagecompressor.html">
-            <i class='bx bx-collapse-alt'></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Image Compressor</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- timer -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="#">
-            <i class='bx bxs-timer' ></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Timer</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- colorpicker -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="#">
-            <i class="bx bx-color"></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Color Picker</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- password generator -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="#">
-            <i class='bx bxs-lock'></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Password Generator</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- random generator -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="#">
-            <i class='bx bx-shuffle'></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>Random Generator</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-        <!-- qr code generator -->
-        <div class="sidebar-item">
-          <a class="sidebar-icons sidebar-item change-target" href="#">
-            <i class='bx bx-qr' ></i>
-          </a>
-          <div class="extend-sidebar">
-            <span>QR Code Generator</span>
-            <a href="#">
-              <i class="bx bx-arrow-from-bottom"></i>
-            </a>
-          </div>
-        </div>
-      </aside>
+      <template src="./templates/sidebar.html"></template>
       <section class="converter">
           <div class="convert-header">
               <h1 class="convert-title">Image File Convert to: </h1>

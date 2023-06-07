@@ -13,7 +13,6 @@
 
 .bx {
     display: block;
-    font-size: 30px;
     color: white;
     user-select: none;
 }
@@ -67,9 +66,10 @@ body {
             flex-grow: 70;
             text-align: left;
             color: var(--general-text-cl);
+            padding-left: 15px;
 
             @media screen and (max-width: 635px) {
-                font-size: 15px;
+                font-size: 25px;
             }
         }
 
@@ -84,21 +84,7 @@ body {
             }
 
             @media screen and (max-width: 635px) {
-                font-size: 22px;
-            }
-        }
-
-        .toggle-target-blank {
-            justify-content: left;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            flex-grow: 1;
-            padding-left: 5px;
-            font-size: 30px;
-
-            @media screen and (max-width: 635px) {
-                font-size: 22px;
+                font-size: 25px;
             }
         }
 
@@ -112,13 +98,14 @@ body {
             font-size: 30px;
 
             @media screen and (max-width: 635px) {
-                font-size: 22px;
+                font-size: 25px;
             }
         }
 
 
     .page {
         display: flex;
+        margin-bottom: 100px;
 
         //sidebar ------------------------------------------- sidebar
         .sidebar {

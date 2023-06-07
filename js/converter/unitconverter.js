@@ -207,3 +207,179 @@ function convertweight() {
 
   document.getElementById("weight-result").innerHTML = result.toFixed(2) + " " + toUnit;
 }
+
+function convertTime(inputValue, fromUnit, toUnit) {
+  let result = 0.0;
+
+  if (fromUnit === "millisecond") {
+    if (toUnit === "second") {
+      result = inputValue / 1000;
+    } else if (toUnit === "minute") {
+      result = inputValue / 60000;
+    } else if (toUnit === "hour") {
+      result = inputValue / 3600000;
+    } else if (toUnit === "day") {
+      result = inputValue / 86400000;
+    } else if (toUnit === "week") {
+      result = inputValue / 604800000;
+    } else if (toUnit === "month") {
+      result = inputValue / 2628000000;
+    } else if (toUnit === "year") {
+      result = inputValue / 31536000000;
+    } else {
+      result = inputValue;
+    }
+  } else if (fromUnit === "second") {
+    if (toUnit === "millisecond") {
+      result = inputValue * 1000;
+    } else if (toUnit === "minute") {
+      result = inputValue / 60;
+    } else if (toUnit === "hour") {
+      result = inputValue / 3600;
+    } else if (toUnit === "day") {
+      result = inputValue / 86400;
+    } else if (toUnit === "week") {
+      result = inputValue / 604800;
+    } else if (toUnit === "month") {
+      result = inputValue / 2628000;
+    } else if (toUnit === "year") {
+      result = inputValue / 31536000;
+    } else {
+      result = inputValue;
+    }
+  } else if (fromUnit === "minute") {
+    if (toUnit === "millisecond") {
+      result = inputValue * 60000;
+    } else if (toUnit === "second") {
+      result = inputValue * 60;
+    } else if (toUnit === "hour") {
+      result = inputValue / 60;
+    } else if (toUnit === "day") {
+      result = inputValue / 1440;
+    } else if (toUnit === "week") {
+      result = inputValue / 10080;
+    } else if (toUnit === "month") {
+      result = inputValue / 43800;
+    } else if (toUnit === "year") {
+      result = inputValue / 525600;
+    } else {
+      result = inputValue;
+    }
+  } else if (fromUnit === "hour") {
+    if (toUnit === "millisecond") {
+      result = inputValue * 3600000;
+    } else if (toUnit === "second") {
+      result = inputValue * 3600;
+    } else if (toUnit === "minute") {
+      result = inputValue * 60;
+    } else if (toUnit === "day") {
+      result = inputValue / 24;
+    } else if (toUnit === "week") {
+      result = inputValue / 168;
+    } else if (toUnit === "month") {
+      result = inputValue / 730;
+    } else if (toUnit === "year") {
+      result = inputValue / 8760;
+    } else {
+      result = inputValue;
+    }
+  } else if (fromUnit === "day") {
+    if (toUnit === "millisecond") {
+      result = inputValue * 86400000;
+    } else if (toUnit === "second") {
+      result = inputValue * 86400;
+    } else if (toUnit === "minute") {
+      result = inputValue * 1440;
+    } else if (toUnit === "hour") {
+      result = inputValue * 24;
+    } else if (toUnit === "week") {
+      result = inputValue / 7;
+    } else if (toUnit === "month") {
+      result = inputValue / 30.417;
+    } else if (toUnit === "year") {
+      result = inputValue / 365;
+    } else {
+      result = inputValue;
+    }
+  } else if (fromUnit === "week") {
+    if (toUnit === "millisecond") {
+      result = inputValue * 604800000;
+    } else if (toUnit === "second") {
+      result = inputValue * 604800;
+    } else if (toUnit === "minute") {
+      result = inputValue * 10080;
+    } else if (toUnit === "hour") {
+      result = inputValue * 168;
+    } else if (toUnit === "day") {
+      result = inputValue * 7;
+    } else if (toUnit === "month") {
+      result = inputValue / 4.345;
+    } else if (toUnit === "year") {
+      result = inputValue / 52.143;
+    } else {
+      result = inputValue;
+    }
+  } else if (fromUnit === "month") {
+    if (toUnit === "millisecond") {
+      result = inputValue * 2628000000;
+    } else if (toUnit === "second") {
+      result = inputValue * 2628000;
+    } else if (toUnit === "minute") {
+      result = inputValue * 43800;
+    } else if (toUnit === "hour") {
+      result = inputValue * 730;
+    } else if (toUnit === "day") {
+      result = inputValue * 30.417;
+    } else if (toUnit === "week") {
+      result = inputValue * 4.345;
+    } else if (toUnit === "year") {
+      result = inputValue / 12;
+    } else {
+      result = inputValue;
+    }
+  } else if (fromUnit === "year") {
+    if (toUnit === "millisecond") {
+      result = inputValue * 31536000000;
+    } else if (toUnit === "second") {
+      result = inputValue * 31536000;
+    } else if (toUnit === "minute") {
+      result = inputValue * 525600;
+    } else if (toUnit === "hour") {
+      result = inputValue * 8760;
+    } else if (toUnit === "day") {
+      result = inputValue * 365;
+    } else if (toUnit === "week") {
+      result = inputValue * 52.143;
+    } else if (toUnit === "month") {
+      result = inputValue * 12;
+    } else {
+      result = inputValue;
+    }
+  } else {
+    result = inputValue;
+  }
+
+  return result;
+}
+
+function formatTimeUnit(unit, value) {
+  if (value === 1) {
+    return `${value} ${unit}`;
+  } else {
+    return `${value} ${unit}s`;
+  }
+}
+
+function convertTimeAndDisplay() {
+  const inputValue = parseFloat(document.getElementById("time-inputValue").value);
+  const fromUnit = document.getElementById("time-fromUnit").value;
+  const toUnit = document.getElementById("time-toUnit").value;
+
+  const convertedValue = convertTime(inputValue, fromUnit, toUnit);
+  document.getElementById("time-result").textContent = formatTimeUnit(toUnit, convertedValue);
+}
+
+
+function convertCurrency() {
+  	
+}
