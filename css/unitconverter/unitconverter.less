@@ -1,21 +1,14 @@
 .unit-converter-section {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     text-align: center;
     justify-content: center;
     color: var(--font-color-pg);
-    padding-top: 15px;
+    padding-top: 25px;
     letter-spacing: 2px;
     gap: 50px;
-    flex-grow: 15;
+    width: 100%;
     padding-left: 15px;
 
-    .horizontal-line {
-        background-color: var(--font-color-hl);
-        height: 2px;
-        width: 100%;
-        border-radius: 5px;
-    }
 
     .converter {
         display: flex;
@@ -35,19 +28,29 @@
             width: 100px;
         }
 
-        .unit-dropdown-wrapper {
+        .unit-dropdown-wrapper-wrapper {
             display: flex;
             flex-direction: row;
-            gap: 5px;
+            gap: 50px;
 
-            .unit-dropdown {
-                background-color: var(--background-color-bg);
-                color: var(--font-color-hl);
-                border: none;
-                width: 150px;
-                font-family: "Montserrat";
-                font-size: 15px;
-                cursor: pointer;
+            @media screen and (max-width: 760px) {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .unit-dropdown-wrapper {
+                display: flex;
+                flex-direction: row;
+
+                .unit-dropdown {
+                    background-color: var(--background-color-bg);
+                    color: var(--font-color-hl);
+                    border: none;
+                    width: min-content;
+                    font-family: "Montserrat";
+                    font-size: 15px;
+                    cursor: pointer;
+                }
             }
         }
 
@@ -69,11 +72,16 @@
     display: flex;
     text-align: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     font-weight: 400;
-    padding-top: 15px;
-    padding: 10px;
+    padding-top: 25px;
+    padding-right: 10px;
     width: fit-content;
+
+    @media screen and (max-width: 460px) {
+        gap: 20px;
+    }
+
     .bx {
         font-size: 23px;
         color: var(--font-color-hl);
@@ -81,5 +89,13 @@
 
     a {
         color: var(--font-color-hl);
+
+    }
+
+    span {
+
+        @media screen and (max-width: 460px) {
+            display: none;
+        }
     }
 }

@@ -1,52 +1,96 @@
 function convertlength() {
-    var inputValue = parseFloat(document.getElementById("inputValue-length").value);
-    var fromUnit = document.getElementById("fromUnit-length").value;
-    var toUnit = document.getElementById("toUnit-length").value;
-    var result = 0;
-    
-    if (fromUnit === "m") {
-      if (toUnit === "cm") {
-        result = inputValue * 100;
-      } else if (toUnit === "in") {
-        result = inputValue * 39.37;
-      } else if (toUnit === "ft") {
-        result = inputValue * 3.281;
-      } else {
-        result = inputValue;
-      }
-    } else if (fromUnit === "cm") {
-      if (toUnit === "m") {
-        result = inputValue / 100;
-      } else if (toUnit === "in") {
-        result = inputValue / 2.54;
-      } else if (toUnit === "ft") {
-        result = inputValue / 30.48;
-      } else {
-        result = inputValue;
-      }
-    } else if (fromUnit === "in") {
-      if (toUnit === "m") {
-        result = inputValue / 39.37;
-      } else if (toUnit === "cm") {
-        result = inputValue * 2.54;
-      } else if (toUnit === "ft") {
-        result = inputValue / 12;
-      } else {
-        result = inputValue;
-      }
-    } else if (fromUnit === "ft") {
-      if (toUnit === "m") {
-        result = inputValue / 3.281;
-      } else if (toUnit === "cm") {
-        result = inputValue * 30.48;
-      } else if (toUnit === "in") {
-        result = inputValue * 12;
-      } else {
-        result = inputValue;
-      }
+  var inputValue = parseFloat(document.getElementById("inputValue-length").value);
+  var fromUnit = document.getElementById("fromUnit-length").value;
+  var toUnit = document.getElementById("toUnit-length").value;
+  var result = 0;
+
+  if (fromUnit === "m") {
+    if (toUnit === "cm") {
+      result = inputValue * 100;
+    } else if (toUnit === "in") {
+      result = inputValue * 39.37;
+    } else if (toUnit === "ft") {
+      result = inputValue * 3.281;
+    } else if (toUnit === "km") {
+      result = inputValue / 1000;
+    } else if (toUnit === "mi") {
+      result = inputValue / 1609.34;
+    } else {
+      result = inputValue;
     }
-    
-    document.getElementById("length-result").innerHTML = result.toFixed(2) + " " + toUnit;
+  } else if (fromUnit === "cm") {
+    if (toUnit === "m") {
+      result = inputValue / 100;
+    } else if (toUnit === "in") {
+      result = inputValue / 2.54;
+    } else if (toUnit === "ft") {
+      result = inputValue / 30.48;
+    } else if (toUnit === "km") {
+      result = inputValue / 100000;
+    } else if (toUnit === "mi") {
+      result = inputValue / 160934;
+    } else {
+      result = inputValue;
+    }
+  } else if (fromUnit === "in") {
+    if (toUnit === "m") {
+      result = inputValue / 39.37;
+    } else if (toUnit === "cm") {
+      result = inputValue * 2.54;
+    } else if (toUnit === "ft") {
+      result = inputValue / 12;
+    } else if (toUnit === "km") {
+      result = inputValue / 39370.1;
+    } else if (toUnit === "mi") {
+      result = inputValue / 63360;
+    } else {
+      result = inputValue;
+    }
+  } else if (fromUnit === "ft") {
+    if (toUnit === "m") {
+      result = inputValue / 3.281;
+    } else if (toUnit === "cm") {
+      result = inputValue * 30.48;
+    } else if (toUnit === "in") {
+      result = inputValue * 12;
+    } else if (toUnit === "km") {
+      result = inputValue / 3280.84;
+    } else if (toUnit === "mi") {
+      result = inputValue / 5280;
+    } else {
+      result = inputValue;
+    }
+  } else if (fromUnit === "km") {
+    if (toUnit === "m") {
+      result = inputValue * 1000;
+    } else if (toUnit === "cm") {
+      result = inputValue * 100000;
+    } else if (toUnit === "in") {
+      result = inputValue * 39370.1;
+    } else if (toUnit === "ft") {
+      result = inputValue * 3280.84;
+    } else if (toUnit === "mi") {
+      result = inputValue / 1.609;
+    } else {
+      result = inputValue;
+    }
+  } else if (fromUnit === "mi") {
+    if (toUnit === "m") {
+      result = inputValue * 1609.34;
+    } else if (toUnit === "cm") {
+      result = inputValue * 160934;
+    } else if (toUnit === "in") {
+      result = inputValue * 63360;
+    } else if (toUnit === "ft") {
+      result = inputValue * 5280;
+    } else if (toUnit === "km") {
+      result = inputValue * 1.609;
+    } else {
+      result = inputValue;
+    }
+  }
+
+  document.getElementById("length-result").innerHTML = result.toFixed(2) + " " + toUnit;
 }
 
 

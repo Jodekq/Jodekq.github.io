@@ -44,7 +44,7 @@
         <section class="calcsection">
             <div class="calculator">
                 <div class="row">
-                    <div class="btn" onclick="deleteCharacter()"><i class='bx bxs-tag-x'></i></i></div>
+                    <div class="btn" id="deletecharacter" onclick="deleteCharacter()"><i class='bx bxs-tag-x'></i></i></div>
                     <div class="btn" onclick="appendValue('/')">/</div>
                     <div class="btn" onclick="appendValue('*')">*</div>
                 </div>
@@ -83,8 +83,6 @@
         <div class="clear-button" id="clear-button"><i class='bx bx-trash' ></i></div>
       </section>  
     </section>
-    <footer>
-        
-    </footer>
+    <template src="./templates/footer.html"></template>
 </body>
 </html>

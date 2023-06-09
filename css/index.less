@@ -14,7 +14,15 @@
 .bx {
     display: block;
     color: white;
+    font-size: 30px;
     user-select: none;
+}
+
+.horizontal-line {
+    background-color: var(--header-sidebar-color-bg);
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
 }
 
 ::-webkit-scrollbar {
@@ -41,7 +49,6 @@ a:visited {
 }
 
 body {
-    padding: 5px;
     background-color: var(--background-color-bg);
     user-select: none;
     font-family: "Montserrat";
@@ -56,51 +63,68 @@ body {
         border-radius: 5px;
         text-align: center;
         width: 100%;
-        left: -8px;
+        left: -5px;
         background-color: var(--header-sidebar-color-bg);
         gap: 20px;
+        margin-top: 10px;
     } 
 
-        .title {
-            justify-content: center;
-            flex-grow: 70;
-            text-align: left;
-            color: var(--general-text-cl);
-            padding-left: 15px;
+    .title {
+        flex-grow: 70;
+        text-align: left;
+        color: var(--general-text-cl);
+        padding-left: 15px;
 
-            @media screen and (max-width: 635px) {
-                font-size: 25px;
+        @media screen and (max-width: 800px) {
+            font-size: 25px;
+        }
+
+        @media screen and (max-width: 500px) {
+            font-size: 20px;
+        }
+
+        .title-long {
+            @media screen and (max-width: 500px) {
+                display: none;
             }
         }
 
-        .discord-button {
-            flex-grow: 7;
-            padding-right: 15px;
-            font-size: 30px;
-
-            .bx .bxl-discord-alt {
-                width: 36px;
-                height: 36px;
-            }
-
-            @media screen and (max-width: 635px) {
-                font-size: 25px;
+        .title-short {
+            display: flex;
+            @media screen and (min-width: 500px) {
+                display: none;
             }
         }
+    }
 
+    .discord-button {
+        flex-grow: 7;
+        padding-right: 15px;
+        font-size: 30px;
 
-        .theme-button {
-            background: transparent;
-            float: right;
-            border: none;
-            cursor: pointer;
-            flex-grow: 1;
-            font-size: 30px;
-
-            @media screen and (max-width: 635px) {
-                font-size: 25px;
-            }
+        .bx .bxl-discord-alt {
+            width: 36px;
+            height: 36px;
         }
+
+        @media screen and (max-width: 635px) {
+            font-size: 25px;
+        }
+    }
+
+
+    .theme-button {
+        background: transparent;
+        float: right;
+        border: none;
+        cursor: pointer;
+        flex-grow: 1;
+        font-size: 30px;
+
+        @media screen and (max-width: 635px) {
+            font-size: 25px;
+        }
+    }
 
 
     .page {
@@ -117,22 +141,22 @@ body {
             width: 10%;
         
             .sidebar-icons {
-            background-color: var(--header-sidebar-color-bg);
-            border-radius: 5px;
-            padding: 5px;
-            padding-left: 10px;
-            position: relative;
-            left: -10px;
-            z-index: 5;
-            font-size: 30px;
+                background-color: var(--header-sidebar-color-bg);
+                border-radius: 5px;
+                padding: 5px;
+                padding-left: 10px;
+                position: relative;
+                left: -5px;
+                z-index: 5;
+                font-size: 30px;
         
-            &.sidebar-item {
-                &:hover ~ .extend-sidebar {
-                display: flex;
-                left: -16px;
-                transition: left 0.5s ease-in-out;
+                &.sidebar-item {
+                    &:hover ~ .extend-sidebar {
+                        display: flex;
+                        left: -16px;
+                        transition: left 0.5s ease-in-out;
+                    }
                 }
-            }
             }
             
             .sidebar-item {
@@ -176,7 +200,74 @@ body {
 
     .main-footer {
         display: flex; 
-        justify-content: center;
+        flex-direction: column;
         width: 100%;
+        height: fit-content;
+
+        .info {
+            height: 100px;
+            width: 100%;
+        }
+
+        .lines {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .linear-gradient {
+                height: 400px;
+                background-image: linear-gradient(
+                    var(--header-sidebar-color-bg) 0px, var(--header-sidebar-color-bg) 1px,
+                    transparent 1px, transparent 20px,
+                    var(--header-sidebar-color-bg) 20px, var(--header-sidebar-color-bg) 22px,
+                    transparent 22px, transparent 40px,
+                    var(--header-sidebar-color-bg) 40px, var(--header-sidebar-color-bg) 43px,
+                    transparent 43px, transparent 60px,
+                    var(--header-sidebar-color-bg) 60px, var(--header-sidebar-color-bg) 64px,
+                    transparent 64px, transparent 80px,
+                    var(--header-sidebar-color-bg) 80px, var(--header-sidebar-color-bg) 85px,
+                    transparent 85px, transparent 100px,
+                    var(--header-sidebar-color-bg) 100px, var(--header-sidebar-color-bg) 106px,
+                    transparent 106px, transparent 120px,
+                    var(--header-sidebar-color-bg) 120px, var(--header-sidebar-color-bg) 127px,
+                    transparent 127px, transparent 140px,
+                    var(--header-sidebar-color-bg) 140px, var(--header-sidebar-color-bg) 148px,
+                    transparent 148px, transparent 160px,
+                    var(--header-sidebar-color-bg) 160px, var(--header-sidebar-color-bg) 169px,
+                    transparent 169px, transparent 180px,
+                    var(--header-sidebar-color-bg) 180px, var(--header-sidebar-color-bg) 190px,
+                    transparent 190px, transparent 200px,
+                    var(--header-sidebar-color-bg) 200px, var(--header-sidebar-color-bg) 211px,
+                    transparent 211px, transparent 220px,
+                    var(--header-sidebar-color-bg) 220px, var(--header-sidebar-color-bg) 232px,
+                    transparent 232px, transparent 240px,
+                    var(--header-sidebar-color-bg) 240px, var(--header-sidebar-color-bg) 253px,
+                    transparent 253px, transparent 260px,
+                    var(--header-sidebar-color-bg) 260px, var(--header-sidebar-color-bg) 274px,
+                    transparent 274px, transparent 280px,
+                    var(--header-sidebar-color-bg) 280px, var(--header-sidebar-color-bg) 295px,
+                    transparent 295px, transparent 300px,
+                    var(--header-sidebar-color-bg) 300px, var(--header-sidebar-color-bg) 316px,
+                    transparent 316px, transparent 320px,
+                    var(--header-sidebar-color-bg) 320px, var(--header-sidebar-color-bg) 337px,
+                    transparent 337px, transparent 340px,
+                    var(--header-sidebar-color-bg) 340px, var(--header-sidebar-color-bg) 358px,
+                    transparent 358px, transparent 360px,
+                    var(--header-sidebar-color-bg) 360px, var(--header-sidebar-color-bg) 379px,
+                    transparent 379px, transparent 380px,
+                    var(--header-sidebar-color-bg) 380px, var(--header-sidebar-color-bg) 400px,
+                    transparent 400px, transparent 400px,
+                );
+            }
+
+            .bigline {
+                width: 100%;
+                height: 80px;
+                background-color: var(--header-sidebar-color-bg);
+            }
+
+        }
+
+
     }
 }

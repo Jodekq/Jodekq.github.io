@@ -24,47 +24,48 @@
     <link rel="stylesheet/less" type="text/css" href="css/calculator/minicalcstyle.less">
 </head>
 <body>
-    <section class="calcsection">
-        <div class="calculator">
-            <div class="row">
-                <div class="btn" onclick="deleteCharacter()"><i class='bx bxs-tag-x'></i></i></div>
-                <div class="btn" onclick="appendValue('/')">/</div>
-                <div class="btn" onclick="appendValue('*')">*</div>
+    <section class="complete-calculator">
+        <section class="calcsection">
+            <div class="calculator">
+                <div class="row">
+                    <div class="btn" onclick="deleteCharacter()"><i class='bx bxs-tag-x'></i></i></div>
+                    <div class="btn" onclick="appendValue('/')">/</div>
+                    <div class="btn" onclick="appendValue('*')">*</div>
+                </div>
+                <div class="row">
+                    <div class="btn" onclick="appendValue('7')">7</div>
+                    <div class="btn" onclick="appendValue('8')">8</div>
+                    <div class="btn" onclick="appendValue('9')">9</div>
+                </div>
+                <div class="row">
+                    <div class="btn" onclick="appendValue('4')">4</div>
+                    <div class="btn" onclick="appendValue('5')">5</div>
+                    <div class="btn" onclick="appendValue('6')">6</div>
+                </div>
+                <div class="row">
+                    <div class="btn" onclick="appendValue('1')">1</div>
+                    <div class="btn" onclick="appendValue('2')">2</div>
+                    <div class="btn" onclick="appendValue('3')">3</div>
+                </div>
+                <div class="row">
+                    <div class="btn-big-horizontally" onclick="appendValue('0')">0</div>
+                    <div class="btn" onclick="appendValue('.')">.</div>
+                </div>
             </div>
-            <div class="row">
-                <div class="btn" onclick="appendValue('7')">7</div>
-                <div class="btn" onclick="appendValue('8')">8</div>
-                <div class="btn" onclick="appendValue('9')">9</div>
+            <div class="extra-calc">
+                <div class="extra-row">
+                    <div class="btn" onclick="appendValue('-')">-</div>
+                    <div class="btn-big-vertical" onclick="appendValue('+')">+</div>
+                    <div class="btn-big-vertical" onclick="calculateResult()"><i class='bx bx-subdirectory-left' ></i>
+                </div>
             </div>
-            <div class="row">
-                <div class="btn" onclick="appendValue('4')">4</div>
-                <div class="btn" onclick="appendValue('5')">5</div>
-                <div class="btn" onclick="appendValue('6')">6</div>
-            </div>
-            <div class="row">
-                <div class="btn" onclick="appendValue('1')">1</div>
-                <div class="btn" onclick="appendValue('2')">2</div>
-                <div class="btn" onclick="appendValue('3')">3</div>
-            </div>
-            <div class="row">
-                <div class="btn-big-horizontally" onclick="appendValue('0')">0</div>
-                <div class="btn" onclick="appendValue('.')">.</div>
-            </div>
-        </div>
-        <div class="extra-calc">
-            <div class="extra-row">
-                <div class="btn" onclick="appendValue('-')">-</div>
-                <div class="btn-big-vertical" onclick="appendValue('+')">+</div>
-                <div class="btn-big-vertical" onclick="calculateResult()"><i class='bx bx-subdirectory-left' ></i>
-            </div>
-        </div>   
-    </section> 
-    <div class="screen-wrapper">
-        <div class="screen" id="result-screen"></div>
-    </div>
-    <div class="result-container-wrapper">
-        <div class="result-container" id="result-container"></div>
+        </section>
+        <div class="wrapper-screen-result">
+          <div class="screen" id="result-screen"></div>
+          <div class="result-container" id="result-container"></div>
+        </div>  
         <div class="clear-button" id="clear-button"><i class='bx bx-trash' ></i></div>
-    </div>
+      </section>  
+    </section>
 </body>
 </html>

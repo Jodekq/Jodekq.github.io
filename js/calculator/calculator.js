@@ -5,7 +5,7 @@ let result = '';
 // Retrieve results from local storage on page load
 window.addEventListener('load', function () {
   if (localStorage.getItem('results')) {
-    result = localStorage.getItem('result');
+    result = localStorage.getItem('results');
     updateScreen();
     restoreResultBoxes();
   }
@@ -17,8 +17,8 @@ function appendValue(value) {
 }
 
 function deleteCharacter() {
-  result = result.slice(0, result.length - 1);
-  updateScreen();
+    result = result.slice(0, result.length - 1);
+    updateScreen();
 }
 
 function calculateResult() {
@@ -93,7 +93,7 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
-// clear result button
+// Clear result button
 
 const clearButton = document.getElementById('clear-button');
 
@@ -101,3 +101,4 @@ clearButton.addEventListener('click', function () {
   resultContainer.innerHTML = ''; // Clear the contents of the result-container
   localStorage.removeItem('results'); // Remove the results from local storage
 });
+
