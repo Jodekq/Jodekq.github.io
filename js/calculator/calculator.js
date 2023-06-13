@@ -4,10 +4,13 @@ let result = '';
 
 // Retrieve results from local storage on page load
 window.addEventListener('load', function () {
-  if (localStorage.getItem('results')) {
-    result = localStorage.getItem('results');
+  if (localStorage.getItem('result')) {
+    result = localStorage.getItem('result');
     updateScreen();
-    restoreResultBoxes();
+  }
+
+  if (localStorage.getItem('resultContainer')) {
+    resultContainer.innerHTML = localStorage.getItem('resultContainer');
   }
 });
 
@@ -17,17 +20,17 @@ function appendValue(value) {
 }
 
 function deleteCharacter() {
-    result = result.slice(0, result.length - 1);
-    updateScreen();
+  result = result.slice(0, result.length - 1);
+  updateScreen();
 }
 
 function calculateResult() {
   try {
     const calculatedResult = eval(result);
-    result = calculatedResult.toString();
+    result = calculatedResult.toFixed(2);
     updateScreen();
-    showResultBox(result); 
-    saveResultToLocalStorage(result); 
+    showResultBox(result);
+    saveResultToLocalStorage(result);
   } catch (error) {
     console.log('Error: Invalid Expression');
     resultScreen.textContent = 'Error';
@@ -48,28 +51,8 @@ function showResultBox(result) {
 }
 
 function saveResultToLocalStorage(result) {
-  let results = localStorage.getItem('results');
-
-  if (results) {
-    results = results.split(',');
-    results.push(result);
-  } else {
-    results = [result];
-  }
-
-  localStorage.setItem('results', results.join(','));
-}
-
-function restoreResultBoxes() {
-  const results = localStorage.getItem('results');
-
-  if (results) {
-    const resultsArray = results.split(',');
-
-    resultsArray.forEach(function (result) {
-      showResultBox(result);
-    });
-  }
+  localStorage.setItem('result', result);
+  localStorage.setItem('resultContainer', resultContainer.innerHTML);
 }
 
 document.addEventListener('keydown', function (event) {
@@ -99,6 +82,6 @@ const clearButton = document.getElementById('clear-button');
 
 clearButton.addEventListener('click', function () {
   resultContainer.innerHTML = ''; // Clear the contents of the result-container
-  localStorage.removeItem('results'); // Remove the results from local storage
+  localStorage.removeItem('result');
+  localStorage.removeItem('resultContainer');
 });
-

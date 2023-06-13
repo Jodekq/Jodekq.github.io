@@ -1,0 +1,93 @@
+.timer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    height: fit-content;
+    width: 50%;
+    gap: 10px;
+    color: var(--font-color-hl);
+    font-size: 20px;
+
+    p {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .set-timer {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+
+        .dropdown {
+            display: flex;
+            width: fit-content;
+            flex-direction: column;
+            gap: 10px;
+
+            .dropdown-values {
+                display: flex;
+                width: 150px;
+                height: 40px;
+                border-radius: 5px;
+                border: 1px solid var(--font-color-hl);
+                background-color: var(--background-color-bg);
+                color: var(--font-color-hl);
+                cursor: pointer;
+                font-size: 20px;
+                padding-left: 10px;
+            }
+        }
+    }
+
+    // .given-timer {
+        
+    // }
+
+    // .wake-sound {
+
+    // }
+
+    .timer-button {
+        width: 150px;
+        border: 1px solid var(--font-color-hl);
+        border-radius: 5px;
+        background-color: var(--background-color-bg);
+        padding: 8px;
+        color: var(--font-color-hl);
+        cursor: pointer;
+        font-size: 20px;
+    }
+}
+
+
+.progress-bar {
+    padding: 55px;
+    width: 100px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    gap: 20px;
+    
+        .timer-value {
+            width: max-content;
+            font-size: 24px;
+            color: var(--font-color-hl);
+        }
+
+        .done-in {
+            width: max-content;
+            font-size: 24px;
+            color: var(--font-color-hl);
+        }
+    }
+    
+
+
