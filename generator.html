@@ -1,0 +1,210 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/ProjektYIcon1.ico">
+    <title>Project Y / Generator</title>
+
+    <!-- icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- script -->
+    <script src="js/index.js" defer></script>
+    <script src="js/generator/generator.js" defer></script>
+    <script src="js/generator/qrcode.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chance" defer></script>
+    
+    <!-- style -->
+    <script src="https://cdn.jsdelivr.net/npm/less" defer></script>
+    <script src="./templates/template.js" type="module" defer></script> 
+    <link rel="stylesheet/less" type="text/css" href="css/index.less"/>
+    <link rel="stylesheet/less" type="text/css" href="css/fonts.less"/>
+
+    <!-- specific style -->
+    <link rel="stylesheet/less" type="text/css" href="css/generator/generator.less"/>
+
+</head>
+<body data-theme="dark">
+    <!-- header ----------------------------------------------- header -->
+    <header class="main-header">
+        <h1 class="title"><a href="index.html">Project Y </a> <span class="title-long">/ Generator</span> <span class="title-short">/ Gen</span></h1>
+        <!-- toggle themes buttons -->
+        <button id="dark-theme-button" class="theme-button"><i class='bx bx-moon' ></i></button>
+        <button id="light-theme-button" class="theme-button"><i class='bx bx-sun'></i></button>
+        <button id="green-theme-button" class="theme-button"><i class='bx bxs-tree-alt' ></i></button>
+        <!-- discord button -->
+        <a class="discord-button" href="discordserver" target="_blank">
+          <i class='bx bxl-discord-alt'></i>
+        </a>
+    </header>
+    <section class="page">
+      <!--  sidebar -------------------------------------sidebar -->
+      <template src="./templates/sidebar.html"></template>
+      <section class="generator-page">
+        <div class="generator" id="randomgenerator">
+          <h1>Random Generator</h1>
+            <div class="specific-generator">
+              <h4>Number Generator</h4>
+              <div class="specific-generator-content">
+                <p>Amount of Numbers:</p>
+                <select class="dropdown-style-1" id="number-amount">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <p>Numbers-Length:</p>
+                <select class="dropdown-style-1" id="number-length">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <button class="button-style-1" id="number-generate">Generate</button>
+              <div class="result">
+                <p>Your Numbers: <span id="number-result"></span></p>
+              </div>
+            </div>
+          <div class="vertical-line"></div>
+          <div class="horizontal-line"></div>
+          <div class="specific-generator">
+            <h4>"Word" Generator</h4>
+            <div class="specific-generator-content">
+              <label for="words-amount">Amount of Words:</label>
+              <select class="dropdown-style-1" id="words-amount">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <label for="words-length">Word Length:</label>
+              <select class="dropdown-style-1" id="words-length">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+            <!-- <div class="specific-generator-content">
+              <label for="words-type">Word Type:</label>
+              <select class="generator-dropdown" id="words-type">
+                <option value="any">Any</option>
+                <option value="noun">Noun</option>
+                <option value="verb">Verb</option>
+                <option value="adjective">Adjective</option>
+              </select>
+              <label for="words-language">Language:</label>
+              <select class="generator-dropdown" id="words-language">
+                <option value="any">Any</option>
+                <option value="english">English</option>
+                <option value="non-english">Non-English</option>
+              </select>
+            </div> -->
+            <button class="button-style-1" id="words-generate">Generate</button>
+            <div class="result">
+              <p>Your Words: <span id="words-result"></span></p>
+            </div>
+          </div>
+        </div>
+        <div class="big-vertical-line"></div>
+        <div class="big-horizontal-line"></div>
+        <div class="generator" id="passwordgenerator">
+          <h1>Password Generator</h1>
+          <div class="specific-generator">
+            <label for="password-length">Password Length:</label>
+            <select class="dropdown-style-1" id="password-length">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+            </select>
+            <label for="includeUppercase">includeUppercase:</label>
+            <select class="dropdown-style-1" id="includeUppercase">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+            <label for="includeNumbers">includeNumbers:</label>
+            <select class="dropdown-style-1" id="includeNumbers">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+            <label for="includeSymbols">includeSymbols:</label>
+            <select class="dropdown-style-1" id="includeSymbols">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+          <button class="button-style-1" id="password-generate">Generate</button>
+          <div class="result">
+            <p>Your Password: <span id="password-result"></span></p>
+          </div>
+        </div>
+        <div class="big-vertical-line"></div>
+        <div class="big-horizontal-line"></div>
+        <div class="generator" id="qrcodegenerator">
+          <h1>QR Code Generator</h1>
+            <div class="specific-generator">
+              <input class="input-stlye-1" type="text" id="inputText" placeholder="Enter text or URL">
+              <button class="button-style-1" onclick="generateQRCode()">Generate QR Code</button>
+              <div class="qrcode-wrapper">
+                <div id="qrcode"></div>
+              </div>
+            </div>
+            <button class="button-style-2" onclick="copyQRCode()">Copy QR Code</button>
+            <button class="button-style-2" onclick="downloadQRCode()">Download QR Code</button>
+        </div>
+      </section>
+      <div class="sidebar-right">
+        <a href="#randomgenerator"><span>Random</span> <i class='bx bx-shuffle'></i></a>
+        <a href="#passwordgenerator"> <span>Password</span>  <i class='bx bx-lock'></i></a>
+        <a href="#qrcodegenerator"> <span>QR-Code</span>  <i class='bx bx-qr'></i></a>
+        <!-- <a href="#currency-converter"> <span>Currency</span>  <i class='bx bxs-dollar-circle'></i></a> -->
+      </div>
+    </section>
+    <template src="./templates/footer.html"></template>
+</body>
+</html>

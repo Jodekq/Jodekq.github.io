@@ -1,3 +1,12 @@
+function setCircle(base, rotation, steps) {
+    const circleSvg = document.getElementById('circle-timer-svg');
+
+    circleSvg.style.setProperty('--base', base);
+    circleSvg.style.setProperty('--rotation', rotation);
+    circleSvg.style.setProperty('--steps', steps);
+}
+
+
 // bug: timer doesnt continue when not on page
 
 let timerInterval;
@@ -28,16 +37,19 @@ function startTimer() {
 }
 
 function updateTimer() {
+
     timeLeft -= 10;
   
     if (timeLeft <= 0) {
-      clearInterval(timerInterval);
-      timeLeft = 0;
+        clearInterval(timerInterval);
+        timeLeft = 0;
     }
   
     const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
     const seconds = Math.floor((timeLeft / 1000) % 60);
+
+    setCircle(60, 1, 60);
   
     const timerValue = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
     const timerTitle = `${timerValue} - Timer`;
@@ -74,8 +86,6 @@ function stopTimer() {
 
     document.title = "Project Y / Timer";
 }
-
-
 
 function pauseTimer() {
     if (timerInterval) {

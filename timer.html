@@ -42,7 +42,6 @@
       <!--  sidebar -------------------------------------sidebar -->
       <template src="./templates/sidebar.html"></template>
       <section class="timer">
-        <p class="wip">WORK IN PROGRESS - only basics work</p>
         <p>Set timer</p>
         <div class="set-timer">
             <div class="dropdown">
@@ -217,8 +216,13 @@
         <button class="timer-button" onclick="restartTimer()">Restart Timer</button>
       </section>
       <section class="progress-bar">
+        <div class="circle-timer">
+            <svg class="circle-timer-svg" stroke-dasharray="283" id="circle-timer-svg" width="100%" height="100%" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M496,256C496,388.46 388.46,496 256,496C123.54,496 16,388.46 16,256C16,123.54 123.54,16 256,16C388.46,16 496,123.54 496,256Z" style="fill:none;"/>
+            </svg>
+        </div>
         <div class="timer-value">00:00:00</div>
-        <div class="done-in"><span>Finished:</span> <span id="expiration-time"></span></div>
+        <div class="done-in"><i class='bx bx-alarm'></i> <span id="expiration-time"></span></div>
       </section>
     </section>
     <template src="./templates/footer.html"></template>

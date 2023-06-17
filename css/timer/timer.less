@@ -34,7 +34,7 @@
                 width: 150px;
                 height: 40px;
                 border-radius: 5px;
-                border: 1px solid var(--font-color-hl);
+                border: 3px solid var(--color-button);
                 background-color: var(--background-color-bg);
                 color: var(--font-color-hl);
                 cursor: pointer;
@@ -54,7 +54,7 @@
 
     .timer-button {
         width: 150px;
-        border: 1px solid var(--font-color-hl);
+        border: 3px solid var(--color-button);
         border-radius: 5px;
         background-color: var(--background-color-bg);
         padding: 8px;
@@ -75,19 +75,43 @@
     flex-grow: 2;
     flex-direction: column;
     gap: 20px;
-    
-        .timer-value {
-            width: max-content;
-            font-size: 24px;
-            color: var(--font-color-hl);
-        }
 
-        .done-in {
-            width: max-content;
-            font-size: 24px;
-            color: var(--font-color-hl);
+    .circle-timer {
+        width: 200px;
+
+        .circle-timer-svg {
+            --length: 1508.0234375;
+            --base: 60;
+            --rotation: -1;
+            --steps: 60;
+
+            stroke-width: 15px;
+            stroke: var(--color-button);
+
+            path {
+                transition: all 1s linear;
+
+                stroke-dasharray: var(--length);
+                stroke-dashoffset: calc(var(--length) / var(--base) * (var(--base) - var(--steps)) * var(--rotation));
+                stroke-linecap: round;
+                transform-origin: center;
+                transform: rotate(-90deg);
+            }
         }
     }
+    
+    .timer-value {
+        width: max-content;
+        font-size: 24px;
+        color: var(--font-color-hl);
+    }
+
+    .done-in {
+        width: max-content;
+        font-size: 24px;
+        color: var(--font-color-hl);
+    }
+}
     
 
 

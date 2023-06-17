@@ -13,6 +13,7 @@
 
     <!-- script -->
     <script src="js/index.js" defer></script>
+    <script src="js/colorpicker/colorpicker.js" defer></script>
     
     <!-- style -->
     <script src="https://cdn.jsdelivr.net/npm/less" defer></script>
@@ -21,13 +22,13 @@
     <link rel="stylesheet/less" type="text/css" href="css/fonts.less"/>
 
     <!-- specific style -->
-    <link rel="stylesheet/less" type="text/css" href="css/cooking/cooking.less"/>
+    <link rel="stylesheet/less" type="text/css" href="css/colorpicker/colorpicker.less"/>
 
 </head>
 <body data-theme="dark">
     <!-- header ----------------------------------------------- header -->
     <header class="main-header">
-        <h1 class="title"><a class="change-target" href="index.html">Project Y</a><span> / Cooking</span></h1>
+        <h1 class="title"><a class="change-target" href="index.html">Project Y</a><span class="title-long"> / Color Picker</span> <span class="title-short"> / CP</span></h1>
         <!-- toggle themes buttons -->
         <button id="dark-theme-button" class="theme-button"><i class='bx bx-moon' ></i></button>
         <button id="light-theme-button" class="theme-button"><i class='bx bx-sun'></i></button>
@@ -40,6 +41,15 @@
     <section class="page">
       <!--  sidebar -------------------------------------sidebar -->
       <template src="./templates/sidebar.html"></template>
+      <p class="wip">doesnt work properly - wip</p>
+      <div class="color-picker">
+        <div class="color-preview"></div>
+        <div class="color-scheme-selector">
+          <div class="selector-dot"></div>
+        </div>
+        <input type="range" min="0" max="360" value="0" class="spectrum-slider">
+        <input type="text" class="hex-code-display">
+      </div>
     </section>
     <template src="./templates/footer.html"></template>
 </body>
