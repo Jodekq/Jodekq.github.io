@@ -1,6 +1,3 @@
-@import './colors.less';
-@import './fonts.less';
-
 *,
 *::before,
 *::after {
@@ -11,411 +8,44 @@
     list-style: none;
 }
 
-// wip ------------------------------------------------ wip
-
-.wip {
-    color: red;
-    font-size: 30px;
-    font-weight: 500;
-}
-
-// bx icon ---------------------------------------------- bx icon
-
-.bx {
-    display: block;
-    color: white;
-    font-size: 30px;
-    user-select: none;
-}
-
-// lines -------------------------------------------- lines
-
-.big-horizontal-line {
-    background-color: var(--header-sidebar-color-bg);
-    height: 5px;
-    width: 70%;
-    border-radius: 5px;
-}
-
-.horizontal-line {
-    background-color: var(--header-sidebar-color-bg);
-    height: 2px;
-    width: 70%;
-    border-radius: 5px;
-}
-
-.big-vertical-line {
-    background-color: var(--header-sidebar-color-bg);
-    width: 5px;
-    height: 70%;
-    border-radius: 5px;
-}
-
-.vertical-line {
-    background-color: var(--header-sidebar-color-bg);
-    width: 2px;
-    height: 70%;
-    border-radius: 5px;
-}
-
-// scrollbar ----------------------------------------- scrollbar
-
-::-webkit-scrollbar {
-    display: none;
+@font-palette-values --myPalette {
+    font-family: "Nabla";
+    base-palette: 5;
+    override-colors: 6 #006400;
   }
-
-// link ---------------------------------------------- link
-
-a:visited {
-    text-decoration: none;
-    color: var(--general-text-cl);
-}
-
-.header-mainpage-link{
-    cursor: pointer;
-}
-
-// button --------------------------------------------- button
-
-button {
-    font-family: var(--font-family-1);
-}
-
-.button-style-1 {
-    border: none;
-    padding: 5px;
-    background-color: var(--color-button);
-    color: var(--button-text-color);
-    width: min-content;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.button-style-2 { //small button
-    border: none;
-    padding: 3px;
-    background-color: var(--color-button);
-    color: var(--button-text-color);
-    width: fit-content;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 12px;
-}
-
-// dropdown menu --------------------------------------- dropdown menu
-
-.dropdown-style-1 {
-    border: none;
-    padding: 3px 3px;
-    background-color: var(--color-button);
-    color: var(--button-text-color);
-    cursor: pointer;
-    width: fit-content;
-    height: 25px;
-    border-radius: 5px;
-    font-size: 16px;
-    letter-spacing: 2px;
-    font-family: var(--font-family-1);
-    font-size: 16px;
-}
-
-.dropdown-style-2 { // dropdown border transparent
-    background-color: var(--background-color-bg);
-    color: var(--font-color-hl);
-    border: none;
-    width: min-content;
-    font-family: var(--font-family-1);
-    font-size: 16px;
-    cursor: pointer;
-    letter-spacing: 2px;
-}
-
-// input field ------------------------------ input field
-
-.input-stlye-1 {
-    background-color: var(--background-color-bg);
-    color: var(--font-color-hl);
-    border: 2px solid var(--font-color-hl);
-    border-radius: 5px;
-    padding: 5px;
-    width: fit-content;
-    font-family: var(--font-family-1);
-    font-size: 16px;
-
-    &[type=text] {
-        font-size: 16px;
-    
-        &:focus {
-            border: 2px solid var(--font-color-hl);
-        }
-    }
-
-    &::placeholder {
-        color: var(--font-color-hl);
-        font-family: var(--font-family-1);
-        font-size: 13px;
-        letter-spacing: 2px;
-    }
-}
-
-// sidebar right --------------------------------- sidebar right
-
-.sidebar-right {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    gap: 15px;
-    font-weight: 400;
-    padding-top: 25px;
-    padding-right: 10px;
-    width: fit-content;
-
-    @media screen and (max-width: 460px) {
-        gap: 20px;
-    }
-
-    .bx {
-        font-size: 23px;
-        color: var(--font-color-hl);
-    }
-
-    a {
-        color: var(--font-color-hl);
-
-    }
-
-    span {
-
-        @media screen and (max-width: 460px) {
-            display: none;
-        }
-    }
-}
-
-// body ---------------------------------------------- body
 
 body {
     background-color: var(--background-color-bg);
-    font-family: var(--font-family-1);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
 
-    // header ------------------------------------------ header
-
-    .main-header {
-        position: relative;
-        display: flex;
-        align-items: center;
-        height: 65px;
-        border-radius: 5px;
-        text-align: center;
-        width: 100%;
-        left: -5px;
-        background-color: var(--header-sidebar-color-bg);
-        gap: 20px;
-        margin-top: 10px;
-        user-select: none;
-    } 
-
-    .title {
-        flex-grow: 70;
-        text-align: left;
-        color: var(--general-text-cl);
-        padding-left: 15px;
-
-        @media screen and (max-width: 800px) {
-            font-size: 25px;
-        }
-
-        @media screen and (max-width: 520px) {
-            font-size: 20px;
-        }
-
-        .title-long {
-            @media screen and (max-width: 500px) {
-                display: none;
-            }
-        }
-
-        .title-short {
-            display: flex;
-            @media screen and (min-width: 501px) {
-                display: none;
-            }
-        }
-    }
-
-    .discord-button {
-        flex-grow: 7;
-        padding-right: 15px;
-        font-size: 30px;
-
-        .bx .bxl-discord-alt {
-            width: 36px;
-            height: 36px;
-        }
-
-        @media screen and (max-width: 635px) {
-            font-size: 25px;
-        }
-    }
+.project-y {
+    font-family: var(--font-family-2);
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    font-palette: --myPalette;
 
 
-    .theme-button {
-        background: transparent;
-        float: right;
-        border: none;
-        cursor: pointer;
-        flex-grow: 1;
-        font-size: 30px;
-
-        @media screen and (max-width: 635px) {
-            font-size: 25px;
-        }
-    }
-
-
-    .page {
-        display: flex;
-        margin-bottom: 100px;
-
-        //sidebar ------------------------------------------- sidebar
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            margin-top: 15px;
-            gap: 15px;
-            width: 10%;
-            user-select: none;
-        
-            .sidebar-icons {
-                background-color: var(--header-sidebar-color-bg);
-                border-radius: 5px;
-                padding: 5px;
-                padding-left: 10px;
-                position: relative;
-                left: -5px;
-                z-index: 5;
-                font-size: 30px;
-        
-                &.sidebar-item {
-                    &:hover ~ .extend-sidebar {
-                        display: flex;
-                        left: -16px;
-                        transition: left 0.5s ease-in-out;
-                    }
-                }
-            }
-            
-            .sidebar-item {
-            display: flex;
-            flex-direction: row;
-        
-                .extend-sidebar {
-                    display: flex;
-                    flex-direction: row;
-                    color: var(--general-text-cl);
-                    align-items: center;
-                    gap: 5px;
-                    padding-left: 20px;
-                    background-color: var(--header-sidebar-color-bg);
-                    border-radius: 5px;
-                    position: relative;
-                    left: -250px;
-                    transition: left 0.3s ease-in-out;
-                    font-size: 15px;
-
-                    &:hover {
-                        display: flex;
-                        left: -16px;
-                        transition: left 0.3s ease-in-out;
-                    }
-
-                    &:hover a {
-                        cursor: pointer;
-                    }
-
-                    i {
-                        font-size: 25px;
-                    }
-                }
-            }    
-        }
-    }
-
-
-    //footer ------------------------------------------- footer
-
-    .main-footer {
-        display: flex; 
-        flex-direction: column;
-        width: 100%;
+    .title-py-big {
+        font-size: 80px;
+        width: fit-content;
         height: fit-content;
+    }
+}
 
-        .info {
-            height: 100px;
-            width: 100%;
-        }
+.page-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
-        .lines {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-
-            .linear-gradient {
-                height: 400px;
-                background-image: linear-gradient(
-                    var(--header-sidebar-color-bg) 0px, var(--header-sidebar-color-bg) 1px,
-                    transparent 1px, transparent 20px,
-                    var(--header-sidebar-color-bg) 20px, var(--header-sidebar-color-bg) 22px,
-                    transparent 22px, transparent 40px,
-                    var(--header-sidebar-color-bg) 40px, var(--header-sidebar-color-bg) 43px,
-                    transparent 43px, transparent 60px,
-                    var(--header-sidebar-color-bg) 60px, var(--header-sidebar-color-bg) 64px,
-                    transparent 64px, transparent 80px,
-                    var(--header-sidebar-color-bg) 80px, var(--header-sidebar-color-bg) 85px,
-                    transparent 85px, transparent 100px,
-                    var(--header-sidebar-color-bg) 100px, var(--header-sidebar-color-bg) 106px,
-                    transparent 106px, transparent 120px,
-                    var(--header-sidebar-color-bg) 120px, var(--header-sidebar-color-bg) 127px,
-                    transparent 127px, transparent 140px,
-                    var(--header-sidebar-color-bg) 140px, var(--header-sidebar-color-bg) 148px,
-                    transparent 148px, transparent 160px,
-                    var(--header-sidebar-color-bg) 160px, var(--header-sidebar-color-bg) 169px,
-                    transparent 169px, transparent 180px,
-                    var(--header-sidebar-color-bg) 180px, var(--header-sidebar-color-bg) 190px,
-                    transparent 190px, transparent 200px,
-                    var(--header-sidebar-color-bg) 200px, var(--header-sidebar-color-bg) 211px,
-                    transparent 211px, transparent 220px,
-                    var(--header-sidebar-color-bg) 220px, var(--header-sidebar-color-bg) 232px,
-                    transparent 232px, transparent 240px,
-                    var(--header-sidebar-color-bg) 240px, var(--header-sidebar-color-bg) 253px,
-                    transparent 253px, transparent 260px,
-                    var(--header-sidebar-color-bg) 260px, var(--header-sidebar-color-bg) 274px,
-                    transparent 274px, transparent 280px,
-                    var(--header-sidebar-color-bg) 280px, var(--header-sidebar-color-bg) 295px,
-                    transparent 295px, transparent 300px,
-                    var(--header-sidebar-color-bg) 300px, var(--header-sidebar-color-bg) 316px,
-                    transparent 316px, transparent 320px,
-                    var(--header-sidebar-color-bg) 320px, var(--header-sidebar-color-bg) 337px,
-                    transparent 337px, transparent 340px,
-                    var(--header-sidebar-color-bg) 340px, var(--header-sidebar-color-bg) 358px,
-                    transparent 358px, transparent 360px,
-                    var(--header-sidebar-color-bg) 360px, var(--header-sidebar-color-bg) 379px,
-                    transparent 379px, transparent 380px,
-                    var(--header-sidebar-color-bg) 380px, var(--header-sidebar-color-bg) 400px,
-                    transparent 400px, transparent 400px,
-                );
-            }
-
-            .bigline {
-                width: 100%;
-                height: 30px;
-                background-color: var(--header-sidebar-color-bg);
-            }
-
-        }
-
-
+    .work-in-progress {
+        font-family: var(--font-family-3);
+        color: var(--general-text-cl);
+        font-size: 40;
     }
 }

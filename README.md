@@ -1,3 +1,2 @@
-# Project-Y
-Trying out and learning things 
-
+# MyPage
+My personal website
