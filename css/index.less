@@ -8,10 +8,15 @@
     list-style: none;
 }
 
+a:visited { text-decoration: none; color:inherit; }
+a:hover { text-decoration: none; color:inherit; }
+a:focus { text-decoration: none; color:inherit; }
+a:hover, a:active { text-decoration: none;  color:inherit; }
+
 @font-palette-values --myPalette {
     font-family: "Nabla";
-    base-palette: 5;
-    override-colors: 6 #006400;
+    base-palette: 3;
+    override-colors: 3 #000000;
   }
 
 body {
@@ -42,10 +47,31 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    gap: 40px;
 
     .work-in-progress {
         font-family: var(--font-family-3);
         color: var(--general-text-cl);
         font-size: 40;
     }
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        gap: 10px;
+        font-size: 25px;
+        font-family: var(--font-family-3);
+        color: var(--general-text-cl);
+        text-decoration: none;
+
+        .social-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+    }
 }
+
