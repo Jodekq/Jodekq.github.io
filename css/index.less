@@ -127,8 +127,12 @@ section {
 
 
 .about-me {
-    gap: 5px;
     line-height: 24px;
+}
+
+.about-me-small {
+    line-height: 24px;
+    padding-bottom: 16px;
 }
 
 .status-meaning {
@@ -250,22 +254,38 @@ section {
     align-items: center;
     justify-content: space-between;
 
-    div {
+    .card-div {
         display: flex;
+        align-items: center;
         gap: 8px;
 
-        i {
+        .bx {
             display: flex;
             align-items: end;
-        }
-        
-        img {
-            width: 20px;
+            font-size: 21px;
         }
     }
 
-    img {
+    .dot-img {
         height: 16px;
         width: 16px;
+    }
+
+    .small-img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .flag-icon {
+        width: 20px;
+    }
+
+    .deno-icon {
+        background-color: white;
+        border-radius: 50px;
+    }
+
+    .scss-icon {
+
     }
 }
