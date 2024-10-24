@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Infocard from '../components/Infocard.astro';
+import Stack from '../components/Stack.astro';
+import Navbar from '../components/Navbar.astro';
+import Activity from '../components/Activity.astro';
+---
+
+<Layout title="Jodek">
+	<main class="bg-dark">
+		<div class="mx-auto min-h-screen max-w-[800px]">
+			<Navbar />
+			<Header
+			title="Jodek"
+			smallText="Hi! I'm"
+			/>
+			<div class="flex flex-row flex-wrap">
+				<div class="flex flex-col px-5 py-2 w-fit">
+					<div class="flex flex-row gap-5 py-2 w-fit">
+						<Infocard
+						icon="bx bxs-balloon"
+						text="18"
+						/>
+						<Infocard
+						icon="bx bxs-graduation"
+						text="Computer Science"
+						/>
+					</div>
+					<div class="flex flex-row gap-5 py-2 w-fit">
+						<Infocard
+						icon="bx bx-map-pin"
+						text="Germany"
+						/>
+						<Infocard
+						icon="bx bx-heart"
+						text="Technology"
+						/>
+					</div>
+					<div class="flex flex-row gap-5 py-2 w-fit">
+						<Infocard
+						icon="bx bx-world" 
+						text="42"
+						/>
+						<Infocard
+						icon="bx bxs-invader"
+						text="Games & Friends"
+						/>
+					</div>
+				</div>
+				<div class="flex flex-col m-5 gap-4 w-max">
+					<Activity
+					onlineStatus={true}
+					listeningTo="nothing"
+					/>
+				</div>
+			</div>
+			<Stack
+			text="html"
+			icon="bx bxs-stack"
+			/>
+		</div>
+	</main>
+</Layout>

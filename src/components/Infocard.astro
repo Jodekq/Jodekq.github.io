@@ -1,0 +1,15 @@
+---
+interface Props {
+    text: string;
+    icon: string;
+}
+
+const { text, icon } = Astro.props;
+---
+
+<div class="flex items-center p-2 bg-emerald-950 w-fit cursor-help rounded h-fit min-w-max">
+  <div class="md:text-xl text-base text-emerald-50 pr-1">
+    <i class={icon}></i>
+  </div>
+  <span class="md:text-base text-sm font-sans text-emerald-50 text-base">{ text }</span>
+</div>
