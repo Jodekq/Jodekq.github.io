@@ -1,0 +1,17 @@
+---
+interface Props {
+    text: string;
+    imgSrc: string;
+}
+
+const { text, imgSrc } = Astro.props;
+---
+
+<div>
+  <div class="flex items-center p-2 bg-dark border border-emerald-500 w-fit cursor-help rounded-lg h-12">
+    <div class="text-xl text-emerald-50">
+      <img class="w-4 pt-1" src={ imgSrc } alt="">
+    </div>
+    <span class="text-base font-sans text-emerald-50 text-base pr-1 pl-2">{ text }</span>
+  </div>
+</div>

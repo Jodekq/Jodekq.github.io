@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Infocard from '../components/Infocard.astro';
-import Stack from '../components/Stack.astro';
+import Skill from '../components/Skill.astro';
+import SkillImage from '../components/SkillImage.astro';
 import Navbar from '../components/Navbar.astro';
 import Activity from '../components/Activity.astro';
 ---
@@ -15,50 +15,66 @@ import Activity from '../components/Activity.astro';
 			title="Jodek"
 			smallText="Hi! I'm"
 			/>
-			<div class="flex flex-row flex-wrap">
-				<div class="flex flex-col px-5 py-2 w-fit">
-					<div class="flex flex-row gap-5 py-2 w-fit">
-						<Infocard
-						icon="bx bxs-balloon"
-						text="18"
-						/>
-						<Infocard
-						icon="bx bxs-graduation"
-						text="Computer Science"
-						/>
-					</div>
-					<div class="flex flex-row gap-5 py-2 w-fit">
-						<Infocard
-						icon="bx bx-map-pin"
-						text="Germany"
-						/>
-						<Infocard
-						icon="bx bx-heart"
-						text="Technology"
-						/>
-					</div>
-					<div class="flex flex-row gap-5 py-2 w-fit">
-						<Infocard
-						icon="bx bx-world" 
-						text="42"
-						/>
-						<Infocard
-						icon="bx bxs-invader"
-						text="Games & Friends"
-						/>
-					</div>
+			<p class="text-emerald-50 px-5">I’m an 18-year-old self-taught programmer and computer science student from Germany. Motivated by passion and personal projects, I love discovering new tech, experimenting with code, and continuously learning.</p>
+			<div class="flex flex-row flex-wrap m-5 gap-4">
+				<Activity
+				onlineStatus={true}
+				listeningTo="nothing"
+				/>
+			</div>
+			<div class="px-5">
+				<div class="flex flex-row text-emerald-50 font-mono mb-3">
+					<span class="text-2xl md:text-4xl pr-4">Skills</span>
+					<p class="pr-2">windows</p>
+					<p class="pr-2">macOS</p>
+					<p class="pr-2">VSCode</p>
 				</div>
-				<div class="flex flex-col m-5 gap-4 w-max">
-					<Activity
-					onlineStatus={true}
-					listeningTo="nothing"
+				<div class="flex flex-row flex-wrap gap-5">
+					<Skill
+					text="Deno"
+					icon="bx bx-terminal"
+					/>
+					<Skill
+					text="HTML"
+					icon="bx bxl-html5"
+					/>
+					<Skill
+					text="Tailwind"
+					icon="bx bxl-tailwind-css"
+					/>
+					<Skill
+					text="Bootstrap"
+					icon="bx bxl-bootstrap"
+					/>
+					<SkillImage
+					text="Astro"
+					imgSrc="../../public/astro-icon-logo_white.png"
+					/>
+					<SkillImage
+					text="SolidJS"
+					imgSrc="../../public/solidjs-icon.png"
+					/>
+				</div>
+				<div class="border border-emerald-200 rounded my-5"></div>
+				<div class="flex flex-row flex-wrap gap-5">
+					<Skill
+					text="Typescript"
+					icon="bx bxl-typescript"
+					/>
+					<Skill
+					text="Javascript"
+					icon="bx bxl-javascript"
+					/>
+					<Skill
+					text="SQL - learning"
+					icon="bx bx-data"
+					/>
+					<SkillImage
+					text="C - learning"
+					imgSrc="../../public/c-icon.png"
 					/>
 				</div>
 			</div>
-			<Stack
-			text="html"
-			icon="bx bxs-stack"
-			/>
 		</div>
 	</main>
 </Layout>
