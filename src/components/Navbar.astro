@@ -1,0 +1,17 @@
+---
+const socialLinks = [
+  { href: 'https://discord.com/users/485815291406843904', label: 'bx bxl-discord' },
+  { href: 'https://github.com/Jodekq', label: 'bx bxl-github' },
+];
+---
+
+<nav class="flex justify-between items-center p-4 text-emerald-50 text-2xl">
+  <a href="/" class="no-underline">/</a>
+  <div class="flex">
+    {socialLinks.map(link => (
+      <a href={link.href} target="_blank" rel="noopener noreferrer" class="ml-4">
+        <i class={link.label}></i>
+      </a>
+    ))}
+  </div>
+</nav>
