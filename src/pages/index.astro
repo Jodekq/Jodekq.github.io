@@ -5,6 +5,7 @@ import Skill from '../components/Skill.astro';
 import SkillImage from '../components/SkillImage.astro';
 import Navbar from '../components/Navbar.astro';
 import Activity from '../components/Activity.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
 <Layout title="Jodek">
@@ -16,15 +17,15 @@ import Activity from '../components/Activity.astro';
 			smallText="Hi! I'm"
 			/>
 			<p class="text-emerald-50 px-5">I’m an 18-year-old self-taught programmer and computer science student from Germany. Motivated by passion and personal projects, I love discovering new tech, experimenting with code, and continuously learning.</p>
-			<div class="flex flex-row flex-wrap m-5 gap-4">
+			<div class="flex flex-row flex-wrap m-5 gap-4 mb-7">
 				<Activity
 				onlineStatus={true}
 				listeningTo="nothing"
 				/>
 			</div>
 			<div class="px-5">
-				<div class="flex flex-row text-emerald-50 font-mono mb-3">
-					<span class="text-2xl md:text-4xl pr-4">Skills</span>
+				<div class="flex flex-row text-emerald-50 font-mono mb-5">
+					<span class="text-4xl pr-4">Skills</span>
 					<p class="pr-2">windows</p>
 					<p class="pr-2">macOS</p>
 					<p class="pr-2">VSCode</p>
@@ -56,7 +57,7 @@ import Activity from '../components/Activity.astro';
 					/>
 				</div>
 				<div class="border border-emerald-200 rounded my-5"></div>
-				<div class="flex flex-row flex-wrap gap-5">
+				<div class="flex flex-row flex-wrap gap-5 mb-7">
 					<Skill
 					text="Typescript"
 					icon="bx bxl-typescript"
@@ -72,6 +73,42 @@ import Activity from '../components/Activity.astro';
 					<SkillImage
 					text="C - learning"
 					imgSrc="../../public/c-icon.png"
+					/>
+					<SkillImage
+					text="C# - learning"
+					imgSrc="../../public/c-sharp-c-icon.png"
+					/>
+				</div>
+			</div>
+			<div class="px-5">
+				<span class="text-4xl pr-4 text-emerald-50 font-mono">Projects</span>
+				<div class="flex flex-col mt-5 gap-5">
+					<ProjectCard
+					title="My Website"
+					text="My personal website you're looking at, built with Astro and TailwindCSS. There's also a linktree!"
+					imgSrc="../../public/ProfileImageWebsiteJodek_307x305.webp"
+					link1="https://github.com/Jodekq/Jodekq.github.io"
+					link2="https://jodek.dev/linktree"
+					link1Text="Linktree"
+					link2Text="Github"
+					/>
+					<ProjectCard
+					title="FwHn Thüringen"
+					text="Website built for a local handball suport association. Built with Bootstrap and SolidJS."
+					imgSrc="../../public/ProfileImageWebsiteJodek_307x305.webp"
+					link1="https://github.com/whn-thueringen/whn-thueringen.github.io"
+					link2="https://whn-thueringen.de"
+					link1Text="Website"
+					link2Text="Github"
+					/>
+					<ProjectCard
+					title="My Website"
+					text="My personal website you're looking at, built with Astro and TailwindCSS. There's also a linktree!"
+					imgSrc="../../public/astro-icon-logo_white.png"
+					link1="https://github.com/Jodekq/Jodekq.github.io"
+					link2="https://jodek.dev/linktree"
+					link1Text="Linktree"
+					link2Text="Github"
 					/>
 				</div>
 			</div>
