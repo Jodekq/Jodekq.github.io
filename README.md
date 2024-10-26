@@ -1,3 +1,3 @@
 # jodek.dev
 
-My pesonal website! Built with Astro and TailwindCSS.
+My personal website! Built with Astro and TailwindCSS.
