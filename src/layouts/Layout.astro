@@ -13,8 +13,39 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" href="../../assets/ProfileImageWebsiteJodek_307x305.webp" />
-		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<meta property='og:title'  content='Jodek'>
+    <meta name='twitter:title' content='Jodek'>
+
+    <!-- url -->
+    <link rel='canonical'       href='https://jodek.dev/'>
+    <meta property='og:url'  content='https://jodek.dev/'>
+    <meta name='twitter:url' content='https://jodek.dev/'>
+
+    <!-- description -->
+    <meta name='description'         content='Ccomputer science student from Germany who loves discovering tech, experimenting with code, and to continuously learn.'>
+    <meta property='og:description'  content='Ccomputer science student from Germany who loves discovering tech, experimenting with code, and to continuously learn.'>
+    <meta name='twitter:description' content='Ccomputer science student from Germany who loves discovering tech, experimenting with code, and to continuously learn.'>
+
+    <!-- image -->
+		<meta name="image" content="../../assets/ProfileImageWebsiteJodek_307x305.webp">
+    <meta property="og:image"  content="../../assets/ProfileImageWebsiteJodek_307x305.webp">
+    <meta name="twitter:image" content="../../assets/ProfileImageWebsiteJodek_307x305.webp">
+
+    <meta property='og:site_name' content='Jodek'>
+    <meta property='og:type' content='website'>
+
+    <meta name="author" content="Jonas Dehne">
+
+    <meta name="language" content="german">
+
+    <meta name="robots" content="index,follow" />
+
+    <meta name="rating" content="safe for kids">
+
+    <meta name="format-detection" content="telephone=yes"/>
+
+    <meta name="HandheldFriendly" content="true"/>
 		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	</head>
 	<body>
