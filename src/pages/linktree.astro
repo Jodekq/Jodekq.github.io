@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/linktree/Header.astro';
+import Link from '../components/linktree/Link.astro';
+
+---
+
+<Layout title="Jodek's Linktree">
+	<main class="bg-dark">
+		<div class="mx-auto min-h-screen max-w-[800px] p-5">
+      <Header
+      name="@jodek"
+      ImgSrc="../../public/assets/ProfileImageWebsiteJodek_307x305.webp"
+      fact1="Jonas"
+      fact2="18"
+      fact3="Studying"
+      />
+      <div class="flex flex-col items-center gap-5 pb-14">
+        <Link
+        text="My Website"
+        link="https://jodek.dev"
+        />
+        <div class="pb-2"></div>
+        <Link
+        text="Discord (my account)"
+        link="https://discord.com/users/485815291406843904"
+        />
+        <Link
+        text="Instagram"
+        link="https://www.instagram.com/joonas.de/"
+        />
+        <Link
+        text="Reddit"
+        link="https://www.reddit.com/user/thejodek/"
+        />
+        <Link
+        text="TikTok"
+        link="https://www.tiktok.com/@the_jodek"
+        />
+        <Link
+        text="X"
+        link="https://x.com/Jodek18"
+        />
+        <div class="pb-2"></div>
+        <Link
+        text="Youtube"
+        link="https://www.youtube.com/@jodek"
+        />
+        <Link
+        text="Twitch"
+        link="https://www.twitch.tv/thejodek"
+        />
+        <div class="pb-2"></div>
+        <Link
+        text="Spotify"
+        link="https://open.spotify.com/user/fgxswj8ejkf4guhf5eyf94jxi"
+        />
+        <Link
+        text="Steam"
+        link="https://steamcommunity.com/id/thejodek/"
+        />
+      </div>
+		</div>
+	</main>
+</Layout>

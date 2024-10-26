@@ -4,8 +4,9 @@ import Header from '../components/Header.astro';
 import Skill from '../components/Skill.astro';
 import SkillImage from '../components/SkillImage.astro';
 import Navbar from '../components/Navbar.astro';
-import Activity from '../components/Activity.astro';
+import ActivityStatus from '../components/ActivityStatus';
 import ProjectCard from '../components/ProjectCard.astro';
+import Age from '../components/Age';
 ---
 
 <Layout title="Jodek">
@@ -16,12 +17,9 @@ import ProjectCard from '../components/ProjectCard.astro';
 			title="Jodek"
 			smallText="Hi! I'm"
 			/>
-			<p class="text-emerald-50 px-5">I’m an 18-year-old self-taught programmer and computer science student from Germany. Motivated by passion and personal projects, I love discovering new tech, experimenting with code, and continuously learning.</p>
+			<Age />
 			<div class="flex flex-row flex-wrap m-5 gap-4 mb-7">
-				<Activity
-				onlineStatus={true}
-				listeningTo="nothing"
-				/>
+				<ActivityStatus client:load />
 			</div>
 			<div class="px-5">
 				<div class="flex flex-row text-emerald-50 font-mono mb-5">
@@ -49,11 +47,11 @@ import ProjectCard from '../components/ProjectCard.astro';
 					/>
 					<SkillImage
 					text="Astro"
-					imgSrc="../../public/astro-icon-logo_white.png"
+					imgSrc="../../public/assets/astro-icon-logo_white.png"
 					/>
 					<SkillImage
 					text="SolidJS"
-					imgSrc="../../public/solidjs-icon.png"
+					imgSrc="../../public/assets/solidjs-icon.png"
 					/>
 				</div>
 				<div class="border border-emerald-200 rounded my-5"></div>
@@ -72,39 +70,48 @@ import ProjectCard from '../components/ProjectCard.astro';
 					/>
 					<SkillImage
 					text="C - learning"
-					imgSrc="../../public/c-icon.png"
+					imgSrc="../../public/assets/c-icon.png"
 					/>
 					<SkillImage
 					text="C# - learning"
-					imgSrc="../../public/c-sharp-c-icon.png"
+					imgSrc="../../public/assets/c-sharp-c-icon.png"
 					/>
 				</div>
 			</div>
 			<div class="px-5">
 				<span class="text-4xl pr-4 text-emerald-50 font-mono">Projects</span>
-				<div class="flex flex-col mt-5 gap-5">
+				<div class="flex flex-col mt-1 gap-5 pb-10">
 					<ProjectCard
-					title="My Website"
-					text="My personal website you're looking at, built with Astro and TailwindCSS. There's also a linktree!"
-					imgSrc="../../public/ProfileImageWebsiteJodek_307x305.webp"
-					link1="https://github.com/Jodekq/Jodekq.github.io"
-					link2="https://jodek.dev/linktree"
-					link1Text="Linktree"
+					title="Minecraft datapacks"
+					text="I've created a lot of Minecraft datapacks, with the goal of adding missing things and making the game more enjoyable. Over 100k downloads on modrinth!"
+					imgSrc="../../public/assets/165845149.png"
+					link1="https://modrinth.com/user/Jodek"
+					link2="https://github.com/jodeks-datapacks"
+					link1Text="Modrinth"
 					link2Text="Github"
 					/>
 					<ProjectCard
 					title="FwHn Thüringen"
 					text="Website built for a local handball suport association. Built with Bootstrap and SolidJS."
-					imgSrc="../../public/ProfileImageWebsiteJodek_307x305.webp"
+					imgSrc="../../public/assets/FWHN_Logo_final_für_Hintergrund_dunkel.svg"
 					link1="https://github.com/whn-thueringen/whn-thueringen.github.io"
 					link2="https://whn-thueringen.de"
 					link1Text="Website"
 					link2Text="Github"
 					/>
 					<ProjectCard
+					title="Plate Pilot"
+					text="Website to manage what you eat. When, What, How Much. Im still working on this one and the website is just a prototype."
+					imgSrc="../../public/assets/157134739.png"
+					link1="https://platepilot.github.io/"
+					link2="https://github.com/PlatePilot"
+					link1Text="Website"
+					link2Text="Github"
+					/>
+					<ProjectCard
 					title="My Website"
 					text="My personal website you're looking at, built with Astro and TailwindCSS. There's also a linktree!"
-					imgSrc="../../public/astro-icon-logo_white.png"
+					imgSrc="../../public/assets/ProfileImageWebsiteJodek_307x305.webp"
 					link1="https://github.com/Jodekq/Jodekq.github.io"
 					link2="https://jodek.dev/linktree"
 					link1Text="Linktree"
