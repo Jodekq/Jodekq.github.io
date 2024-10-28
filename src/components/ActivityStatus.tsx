@@ -53,7 +53,7 @@ const ActivityStatus: React.FC = () => {
    if (loading || !data) return (
       <div className="flex flex-row items-center text-emerald-50 gap-5">
          <a href="https://discord.com/users/Jodek" target="_blank" className="flex flex-row items-center border border-emerald-200 rounded-lg justify-between px-5 pb-1 h-20 font-sans text-xl text-emerald-50 gap-3">
-            <i className="bx bxl-discord-alt text-2xl"></i>
+            <i className="bx bxl-discord-alt text-4xl"></i>
             <div>
                <p className="text-lg font-semibold">
                   @jodek
@@ -68,7 +68,7 @@ const ActivityStatus: React.FC = () => {
             <i className="bx bx-link-external cursor-pointer p-3 text-gray-400"></i>
          </a>
          <div className="px-5 pb-1 border border-emerald-200 rounded-lg font-sans h-20 items-center flex flex-row gap-3">
-            <i className="bx bxl-spotify text-2xl"></i>
+            <i className="bx bxl-spotify text-4xl"></i>
             <div className="flex-1">
                <p className="text-lg font-semibold">Listening to:</p>
                <p className="text-sm">
