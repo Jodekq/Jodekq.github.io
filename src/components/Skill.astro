@@ -1,6 +1,4 @@
 ---
-
-
 interface Props {
     text: string;
     icon: string;
@@ -11,7 +9,7 @@ const { text, icon, class: className, ...rest } = Astro.props;
 ---
 
 <div class:list={['child-component', className]} {...rest}>
-  <div class="flex items-center p-2 bg-dark border border-emerald-500 w-fit cursor-help rounded-lg h-12">
+  <div class="flex items-center p-2">
     <div class="text-xl text-emerald-50">
       <i class={icon}></i>
     </div>
