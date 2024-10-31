@@ -28,54 +28,67 @@ import Age from '../components/Age';
 					<p class="pr-2">macOS</p>
 					<p class="pr-2">VSCode</p>
 				</div>
-				<div class="flex flex-row flex-wrap gap-5">
-					<Skill
-					text="Deno"
-					icon="bx bx-terminal"
-					/>
-					<Skill
-					text="HTML"
-					icon="bx bxl-html5"
-					/>
-					<Skill
-					text="Tailwind"
-					icon="bx bxl-tailwind-css"
-					/>
-					<Skill
-					text="Bootstrap"
-					icon="bx bxl-bootstrap"
-					/>
-					<SkillImage
-					text="Astro"
-					imgSrc="../../assets/astro-icon-logo_white.png"
-					/>
-					<SkillImage
-					text="SolidJS"
-					imgSrc="../../assets/solidjs-icon.png"
-					/>
-				</div>
-				<div class="border border-emerald-200 rounded my-5"></div>
-				<div class="flex flex-row flex-wrap gap-5 mb-7">
-					<Skill
-					text="Typescript"
-					icon="bx bxl-typescript"
-					/>
-					<Skill
-					text="Javascript"
-					icon="bx bxl-javascript"
-					/>
-					<Skill
-					text="SQL - learning"
-					icon="bx bx-data"
-					/>
-					<SkillImage
-					text="C - learning"
-					imgSrc="../../assets/c-icon.png"
-					/>
-					<SkillImage
-					text="C# - learning"
-					imgSrc="../../assets/c-sharp-c-icon.png"
-					/>
+				<div class="flex flex-row sm:flex-col gap-8 sm:gap-0 mb-7">
+					<div class="flex flex-col sm:flex-row sm:flex-wrap gap-5">
+						<Skill
+						text="Deno"
+						icon="bx bx-terminal"
+						class="self-end md:self-start"
+						/>
+						<Skill
+						text="HTML"
+						icon="bx bxl-html5"
+						class="self-end md:self-start"
+						/>
+						<Skill
+						text="Tailwind"
+						icon="bx bxl-tailwind-css"
+						class="self-end md:self-start"
+						/>
+						<Skill
+						text="Bootstrap"
+						icon="bx bxl-bootstrap"
+						class="self-end md:self-start"
+						/>
+						<SkillImage
+						text="Astro"
+						imgSrc="../../assets/astro-icon-logo_white.png"
+						class="self-end md:self-start"
+						/>
+						<SkillImage
+						text="SolidJS"
+						imgSrc="../../assets/solidjs-icon.png"
+						class="self-end md:self-start"
+						/>
+					</div>
+					<div class="border border-emerald-200 rounded sm:my-5"></div>
+					<div class="flex flex-col sm:flex-row sm:flex-wrap gap-5">
+						<Skill
+						text="Typescript"
+						icon="bx bxl-typescript"
+						class="self-start md:self-start"
+						/>
+						<Skill
+						text="Javascript"
+						icon="bx bxl-javascript"
+						class="self-start md:self-start"
+						/>
+						<Skill
+						text="SQL - learning"
+						icon="bx bx-data"
+						class="self-start md:self-start"
+						/>
+						<SkillImage
+						text="C - learning"
+						imgSrc="../../assets/c-icon.png"
+						class="self-start md:self-start"
+						/>
+						<SkillImage
+						text="C# - learning"
+						imgSrc="../../assets/c-sharp-c-icon.png"
+						class="self-start md:self-start"
+						/>
+					</div>
 				</div>
 			</div>
 			<div class="px-5">
@@ -89,6 +102,7 @@ import Age from '../components/Age';
 					link2="https://github.com/jodeks-datapacks"
 					link1Text="Modrinth"
 					link2Text="Github"
+					class="border border-emerald-200 w-full rounded-lg"
 					/>
 					<ProjectCard
 					title="FwHn Thüringen"
@@ -98,6 +112,7 @@ import Age from '../components/Age';
 					link2="https://github.com/whn-thueringen/whn-thueringen.github.io"
 					link1Text="Website"
 					link2Text="Github"
+					class="border border-emerald-200 w-full rounded-lg"
 					/>
 					<ProjectCard
 					title="Plate Pilot"
@@ -107,6 +122,7 @@ import Age from '../components/Age';
 					link2="https://github.com/PlatePilot"
 					link1Text="Website"
 					link2Text="Github"
+					class="border border-emerald-200 w-full rounded-lg"
 					/>
 					<ProjectCard
 					title="My Website"
@@ -116,6 +132,7 @@ import Age from '../components/Age';
 					link2="https://jodek.dev/linktree"
 					link1Text="Linktree"
 					link2Text="Github"
+					class=""
 					/>
 				</div>
 			</div>
