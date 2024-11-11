@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react';
-
 const Age = () => {
   const today = new Date();
   const birthDate = new Date("12/13/2005");
